@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  states = [{code: 'AL', name: 'Alabama'}, {code: 'TX', name: 'Texas'}, {code: 'SF', name: 'San francisco'}];
 }
