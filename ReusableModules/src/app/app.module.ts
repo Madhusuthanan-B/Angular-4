@@ -1,19 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NavBarModule } from './navbar/index';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { UserService } from './user.service';
-import { HttpModule } from '@angular/http';
-import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavbarComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    NavBarModule,
+    HttpModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
