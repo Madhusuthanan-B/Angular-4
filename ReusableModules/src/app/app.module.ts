@@ -4,7 +4,7 @@ import { NavBarModule } from './navbar/index';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { UserService } from './user.service';
+import { UserService } from './services/index';
 
 @NgModule({
   declarations: [
