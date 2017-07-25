@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { NavBarModule } from './navbar/index';
 import { HomeModule } from './home/index';
 import { AboutModule } from './about/index';
 
 import { AppComponent } from './app.component';
-
 import { routing, appRoutingProviders } from './app.routing';
+
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { routing, appRoutingProviders } from './app.routing';
     HomeModule,
     AboutModule
   ],
-  providers: [appRoutingProviders],
+  providers: [appRoutingProviders, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
