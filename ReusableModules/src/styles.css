@@ -1,12 +1,21 @@
 body{
-    background-color: #252830;
-    color: #cfd2da;
-    background-image: url('./assets/images/intro-bg.jpg')
+    background-color: #fff;
+    color: #333;
+    font-family: Lora,'Times New Roman',serif;
+    font-size: 20px;
+    -webkit-tap-highlight-color: #0085A1;
+}
+.intro-header {
+    background-image: url('./assets/images/intro-bg.jpg');
+    background: center center no-repeat;
+    background-size: cover;
+    margin-bottom: 50px
 }
 
-.heading {
-    color: #fff;
-    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;      
+.site-heading {
+   padding: 150px 0;
+   color: #fff;
+   text-align: center;      
 }
 h1{
     font-size: 80px;
