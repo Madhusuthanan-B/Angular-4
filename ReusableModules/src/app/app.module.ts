@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { NavBarModule } from './navbar/index';
 import { HomeModule } from './home/index';
 import { AboutModule } from './about/index';
-import { FocusSetterModule } from './focus-setter/index';
+import { FocusSetterModule } from './modules/index';
 
 import { AppComponent } from './app.component';
 import { routing, appRoutingProviders } from './app.routing';
