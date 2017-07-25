@@ -14,4 +14,8 @@ export class AppComponent {
       console.log(data);
     });
   }
+
+  scrollTop() {
+    window.scroll(0, 0);
+  }
 }
