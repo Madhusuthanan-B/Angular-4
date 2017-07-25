@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { UserService } from './services/index';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +7,6 @@ import { UserService } from './services/index';
 })
 export class AppComponent {
   title = 'app';
-
-  constructor(private userSvc: UserService) {
-    this.userSvc.getUsers().subscribe(data => {
-      console.log(data);
-    });
-  }
 
   scrollTop() {
     window.scroll(0, 0);

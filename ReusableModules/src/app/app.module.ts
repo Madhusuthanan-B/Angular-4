@@ -6,7 +6,6 @@ import { HomeModule } from './home/index';
 import { AboutModule } from './about/index';
 
 import { AppComponent } from './app.component';
-import { UserService } from './services/index';
 
 import { routing, appRoutingProviders } from './app.routing';
 
@@ -23,7 +22,7 @@ import { routing, appRoutingProviders } from './app.routing';
     HomeModule,
     AboutModule
   ],
-  providers: [UserService, appRoutingProviders],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
