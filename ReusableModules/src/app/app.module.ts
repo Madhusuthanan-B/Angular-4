@@ -5,11 +5,10 @@ import { HttpModule } from '@angular/http';
 import { NavBarModule } from './navbar/index';
 import { HomeModule } from './home/index';
 import { AboutModule } from './about/index';
+import { FocusSetterModule } from './focus-setter/index';
 
 import { AppComponent } from './app.component';
 import { routing, appRoutingProviders } from './app.routing';
-
-
 
 @NgModule({
   declarations: [
@@ -21,9 +20,10 @@ import { routing, appRoutingProviders } from './app.routing';
     routing,
     NavBarModule,
     HomeModule,
-    AboutModule
+    AboutModule,
+    FocusSetterModule
   ],
-  providers: [appRoutingProviders, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [appRoutingProviders, { provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
