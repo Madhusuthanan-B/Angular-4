@@ -34,7 +34,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/about/about.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/banner-bg.jpg')\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n        <div class=\"site-heading\">\r\n          <h1> About Madhu</h1>\r\n          <hr class=\"small\">\r\n          <span class=\"subheading\">Hello! My name is Madhu, and I'm a bangalore based angular 2 developer </span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</header>\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n      More details about me available <a target=\"_blank\" href=\"https://www.gitshowcase.com/madhusuthanan-b\">here</a>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/banner-bg.jpg')\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n        <div class=\"site-heading\">\r\n          <h1> About Madhu</h1>\r\n          <hr class=\"small\">\r\n          <span class=\"subheading\">Hello! My name is Madhu, and I'm a bangalore based angular 2 developer </span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</header>\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n     <a target=\"_blank\" href=\"https://www.gitshowcase.com/madhusuthanan-b\">Click here</a> to know more details about my skills and view git repositories.\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -156,7 +156,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar> </app-navbar>\r\n<div>\r\n\t<router-outlet></router-outlet>\r\n</div>\r\n<button class=\"btn btn-default\" (click)=\"scrollTop()\" id=\"scrollTop\" title=\"Go to top\">Top</button>"
+module.exports = "<app-navbar> </app-navbar>\r\n<div>\r\n\t<router-outlet></router-outlet>\r\n</div>\r\n<!-- <button class=\"btn btn-default\" (click)=\"scrollTop()\" id=\"scrollTop\" title=\"Go to top\">Top</button> -->"
 
 /***/ }),
 
