@@ -3,9 +3,7 @@ import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { NavBarModule } from './navbar/index';
-import { HomeModule } from './home/index';
-import { AboutModule } from './about/index';
-import { FocusSetterModule } from './modules/index';
+import { HomeModule, AboutModule, FocusSetterModule, ModalModule  } from './pages/index';
 
 import { AppComponent } from './app.component';
 import { routing, appRoutingProviders } from './app.routing';
@@ -21,7 +19,8 @@ import { routing, appRoutingProviders } from './app.routing';
     NavBarModule,
     HomeModule,
     AboutModule,
-    FocusSetterModule
+    FocusSetterModule,
+    ModalModule
   ],
   providers: [appRoutingProviders, { provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
