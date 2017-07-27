@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FocusSetterComponent } from './focus-setter.component';
+import { FocusDemoComponent } from './focus-demo.component';
 
-describe('FocusSetterComponent', () => {
-  let component: FocusSetterComponent;
-  let fixture: ComponentFixture<FocusSetterComponent>;
+describe('FocusDemoComponent', () => {
+  let component: FocusDemoComponent;
+  let fixture: ComponentFixture<FocusDemoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FocusSetterComponent ]
+      declarations: [ FocusDemoComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FocusSetterComponent);
+    fixture = TestBed.createComponent(FocusDemoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

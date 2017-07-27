@@ -1,9 +1,9 @@
 import { Routes, RouterModule } from '@angular/router';
-import { HomeRoutes, AboutRoutes, FocusSetterRoutes, ModalRoutes } from './pages/index';
+import { HomeRoutes, AboutRoutes, FocusDemoRoutes, ModalRoutes } from './pages/index';
 
 const appRoutes: Routes = [
     ...HomeRoutes, ...AboutRoutes,
-    ...FocusSetterRoutes, ...ModalRoutes];
+    ...FocusDemoRoutes, ...ModalRoutes];
 
 export const appRoutingProviders: any[] = [
 
