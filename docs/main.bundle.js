@@ -244,8 +244,114 @@ FocusSetterModule = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__focus_setter_index__ = __webpack_require__("../../../../../src/app/modules/focus-setter/index.ts");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__focus_setter_index__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modal_index__ = __webpack_require__("../../../../../src/app/modules/modal/index.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__modal_index__["a"]; });
+
 
 //# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/modules/modal/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modal_module__ = __webpack_require__("../../../../../src/app/modules/modal/modal.module.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__modal_module__["a"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/modules/modal/modal.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/modules/modal/modal.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal fade\" id=\"myModal\" role=\"dialog\">\r\n    <div class=\"modal-dialog\">\r\n    \r\n      <!-- Modal content-->\r\n      <div class=\"modal-content\">\r\n        <ng-content> </ng-content>\r\n      </div>\r\n      \r\n    </div>\r\n  </div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/modules/modal/modal.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ModalComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ModalComponent = (function () {
+    function ModalComponent() {
+    }
+    ModalComponent.prototype.ngOnInit = function () {
+    };
+    return ModalComponent;
+}());
+ModalComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-modal',
+        template: __webpack_require__("../../../../../src/app/modules/modal/modal.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/modules/modal/modal.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], ModalComponent);
+
+//# sourceMappingURL=modal.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/modules/modal/modal.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ModalModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modal_component__ = __webpack_require__("../../../../../src/app/modules/modal/modal.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var ModalModule = (function () {
+    function ModalModule() {
+    }
+    return ModalModule;
+}());
+ModalModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
+        declarations: [__WEBPACK_IMPORTED_MODULE_1__modal_component__["a" /* ModalComponent */]],
+        exports: [__WEBPACK_IMPORTED_MODULE_1__modal_component__["a" /* ModalComponent */]]
+    })
+], ModalModule);
+
+//# sourceMappingURL=modal.module.js.map
 
 /***/ }),
 
@@ -784,7 +890,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/modal-demo/modal-demo.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/modal-bg.jpg')\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n        <div class=\"site-heading\">\n          <h1>Bootstrap Modal Module</h1>\n          <hr class=\"small\">\n          <span class=\"subheading\">With this module, you will be able to angular 2 bootstrap overlay</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-lg-6 col-lg-offset-4 col-md-8 col-md-offset-3\">\n     <button class=\"btn btn-primary\">Click here to open overlay</button>\n    </div>\n  </div>\n</div>"
+module.exports = "<app-modal>\n  <div class=\"modal-header\">\n    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n    <h4 class=\"modal-title\">Modal Header</h4>\n  </div>\n  <div class=\"modal-body\">\n    <p>Some text in the modal.</p>\n  </div>\n  <div class=\"modal-footer\">\n    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n  </div>\n</app-modal>\n\n<header class=\"intro-header\" style=\"background-image: url('assets/images/modal-bg.jpg')\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n        <div class=\"site-heading\">\n          <h1>Bootstrap Modal Module</h1>\n          <hr class=\"small\">\n          <span class=\"subheading\">With this module, you will be able to angular 2 bootstrap overlay</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-lg-6 col-lg-offset-4 col-md-8 col-md-offset-3\">\n      <button type=\"button\" class=\"btn btn-info btn-lg\" data-toggle=\"modal\" data-target=\"#myModal\">Open Modal</button>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -830,13 +936,15 @@ ModalDemoComponent = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ModalDemoModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modal_demo_component__ = __webpack_require__("../../../../../src/app/pages/modal-demo/modal-demo.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_index__ = __webpack_require__("../../../../../src/app/modules/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modal_demo_component__ = __webpack_require__("../../../../../src/app/pages/modal-demo/modal-demo.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 var ModalDemoModule = (function () {
@@ -846,10 +954,9 @@ var ModalDemoModule = (function () {
 }());
 ModalDemoModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
-        declarations: [
-            __WEBPACK_IMPORTED_MODULE_1__modal_demo_component__["a" /* ModalDemoComponent */]
-        ],
-        exports: [__WEBPACK_IMPORTED_MODULE_1__modal_demo_component__["a" /* ModalDemoComponent */]]
+        declarations: [__WEBPACK_IMPORTED_MODULE_2__modal_demo_component__["a" /* ModalDemoComponent */]],
+        imports: [__WEBPACK_IMPORTED_MODULE_1__modules_index__["b" /* ModalModule */]],
+        exports: [__WEBPACK_IMPORTED_MODULE_2__modal_demo_component__["a" /* ModalDemoComponent */]]
     })
 ], ModalDemoModule);
 
