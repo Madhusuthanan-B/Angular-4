@@ -114,10 +114,11 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_7__app_routing__["b" /* routing */],
             __WEBPACK_IMPORTED_MODULE_4__navbar_index__["a" /* NavBarModule */],
-            __WEBPACK_IMPORTED_MODULE_5__pages_index__["e" /* HomeModule */],
+            __WEBPACK_IMPORTED_MODULE_5__pages_index__["g" /* HomeModule */],
             __WEBPACK_IMPORTED_MODULE_5__pages_index__["a" /* AboutModule */],
             __WEBPACK_IMPORTED_MODULE_5__pages_index__["c" /* FocusDemoModule */],
-            __WEBPACK_IMPORTED_MODULE_5__pages_index__["g" /* ModalDemoModule */]
+            __WEBPACK_IMPORTED_MODULE_5__pages_index__["i" /* ModalDemoModule */],
+            __WEBPACK_IMPORTED_MODULE_5__pages_index__["e" /* GraphsDemoModule */]
         ],
         providers: [__WEBPACK_IMPORTED_MODULE_7__app_routing__["a" /* appRoutingProviders */], { provide: __WEBPACK_IMPORTED_MODULE_2__angular_common__["g" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_2__angular_common__["d" /* HashLocationStrategy */] }],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
@@ -138,7 +139,7 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_index__ = __webpack_require__("../../../../../src/app/pages/index.ts");
 
 
-var appRoutes = __WEBPACK_IMPORTED_MODULE_1__pages_index__["f" /* HomeRoutes */].concat(__WEBPACK_IMPORTED_MODULE_1__pages_index__["b" /* AboutRoutes */], __WEBPACK_IMPORTED_MODULE_1__pages_index__["d" /* FocusDemoRoutes */], __WEBPACK_IMPORTED_MODULE_1__pages_index__["h" /* ModalDemoRoutes */]);
+var appRoutes = __WEBPACK_IMPORTED_MODULE_1__pages_index__["h" /* HomeRoutes */].concat(__WEBPACK_IMPORTED_MODULE_1__pages_index__["b" /* AboutRoutes */], __WEBPACK_IMPORTED_MODULE_1__pages_index__["d" /* FocusDemoRoutes */], __WEBPACK_IMPORTED_MODULE_1__pages_index__["j" /* ModalDemoRoutes */], __WEBPACK_IMPORTED_MODULE_1__pages_index__["f" /* GraphsDemoRoutes */]);
 var appRoutingProviders = [];
 var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */].forRoot(appRoutes);
 //# sourceMappingURL=app.routing.js.map
@@ -387,7 +388,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top navbar-inverse\">\r\n  <div class=\"container\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\"\r\n        aria-controls=\"navbar\">\r\n            <span class=\"sr-only\">Toggle navigation</span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n          </button>\r\n      <a class=\"navbar-brand\" [routerLink]=\"['/']\">NG-2 Reusable Modules</a>\r\n    </div>\r\n    <div id=\"navbar\" class=\"navbar-collapse collapse\">\r\n      <ul class=\"nav navbar-nav\">\r\n        <li><a routerLink=\"/\" routerLinkActive=\"/\">Home</a></li>\r\n        <li><a routerLink=\"/about\" routerLinkActive=\"about\">About</a></li>\r\n        <li class=\"dropdown\">\r\n          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Modules <span class=\"caret\"></span></a>\r\n          <ul class=\"dropdown-menu\">            \r\n            <li><a routerLink=\"/modal\">Bootstrap Modal</a></li>            \r\n            <li role=\"separator\" class=\"divider\"></li>\r\n            <li class=\"dropdown-header\">Directives</li>\r\n            <li><a routerLink=\"/focus-setter\">Focus Setter</a></li>\r\n          </ul>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n</nav>"
+module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top navbar-inverse\">\r\n  <div class=\"container\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\"\r\n        aria-controls=\"navbar\">\r\n            <span class=\"sr-only\">Toggle navigation</span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n          </button>\r\n      <a class=\"navbar-brand\" [routerLink]=\"['/']\">NG-2 Reusable Modules</a>\r\n    </div>\r\n    <div id=\"navbar\" class=\"navbar-collapse collapse\">\r\n      <ul class=\"nav navbar-nav\">\r\n        <li><a routerLink=\"/\" routerLinkActive=\"/\">Home</a></li>\r\n        <li><a routerLink=\"/about\" routerLinkActive=\"about\">About</a></li>\r\n        <li><a routerLink=\"/graphs-demo\" routerLinkActive=\"graphs-demo\">Graphs</a></li>\r\n        <li class=\"dropdown\">\r\n          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Modules <span class=\"caret\"></span></a>\r\n          <ul class=\"dropdown-menu\">            \r\n            <li><a routerLink=\"/modal\">Bootstrap Modal</a></li>            \r\n            <li role=\"separator\" class=\"divider\"></li>\r\n            <li class=\"dropdown-header\">Directives</li>\r\n            <li><a routerLink=\"/focus-setter\">Focus Setter</a></li>\r\n          </ul>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n</nav>"
 
 /***/ }),
 
@@ -708,7 +709,7 @@ var FocusDemoRoutes = [
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/home/home.component.css":
+/***/ "../../../../../src/app/pages/graphs-demo/graphs-demo.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -726,18 +727,18 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/home/home.component.html":
+/***/ "../../../../../src/app/pages/graphs-demo/graphs-demo.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/intro-bg.jpg')\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n        <div class=\"site-heading\">\r\n          <h1> Explore Reusable Angular 2 Modules</h1>\r\n          <hr class=\"small\">\r\n          <span class=\"subheading\">A collection of variety of angular 2 modules, directives etc which are ready to use</span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</header>\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n      <canvas id=\"bar-chart-grouped\"></canvas>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n      <div class=\"post-preview\">\r\n        <a href=\"https://toddmotto.com/transclusion-in-angular-2-with-ng-content\">\r\n          <h2 class=\"post-title\">\r\n            Angular Content Projection\r\n          </h2>\r\n        </a>\r\n        <h3 class=\"post-subtitle\">\r\n          Projection is a very important concept in Angular. It enables developers to build reusable components and make applications\r\n          more scalable and flexible\r\n        </h3>\r\n\r\n        <p class=\"post-meta\">Posted by <a href=\"https://twitter.com/intent/follow?original_referer=https%3A%2F%2Ftoddmotto.com%2Ftransclusion-in-angular-2-with-ng-content&ref_src=twsrc%5Etfw&region=follow_link&screen_name=toddmotto&tw_p=followbutton\">toddmotto</a>          on Mar 22, 2016</p>\r\n      </div>\r\n      <hr>\r\n      <div class=\"post-preview\">\r\n        <a href=\"https://johnpapa.net/introducing-angular-modules-feature-modules-2/\">\r\n          <h2 class=\"post-title\">\r\n           Angular Modules\r\n          </h2>\r\n        </a>\r\n        <h3 class=\"post-subtitle\">\r\n          NgModules help organize an application into cohesive blocks of functionality.\r\n        </h3>\r\n\r\n        <p class=\"post-meta\">Posted by <a href=\"https://twitter.com/john_papa\">john papa</a> on 17 SEPTEMBER 2016</p>\r\n      </div>\r\n      <hr>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/banner-bg.jpg')\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n        <div class=\"site-heading\">\n          <h1> Responsive and interactive graphs</h1>\n          <hr class=\"small\">\n          <span class=\"subheading\">Try to click on the graphs / graph legends present in this page</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h2>In the below graph examples, click on the graph legend or hover on the graph to get amazing user experience </h2>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h3 class=\"graph-name\">Grouped bar chart</h3>\n      <canvas id=\"bar-chart-grouped\" width=\"800\" height=\"450\"></canvas>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h3 class=\"graph-name\">Doughnut chart</h3>\n      <canvas id=\"doughnut-chart\" width=\"800\" height=\"450\"></canvas>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h3 class=\"graph-name\">Polar area chart</h3>\n      <canvas id=\"polar-chart\" width=\"800\" height=\"450\"></canvas>\n    </div>\n  </div>  \n\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h3 class=\"graph-name\">Line chart</h3>\n      <canvas id=\"line-chart\" width=\"800\" height=\"450\"></canvas>\n    </div>\n  </div>\n\n</div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/home/home.component.ts":
+/***/ "../../../../../src/app/pages/graphs-demo/graphs-demo.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GraphsDemoComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_chart_js__ = __webpack_require__("../../../../chart.js/src/chart.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_chart_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_chart_js__);
@@ -752,10 +753,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var HomeComponent = (function () {
-    function HomeComponent() {
+var GraphsDemoComponent = (function () {
+    function GraphsDemoComponent() {
     }
-    HomeComponent.prototype.ngOnInit = function () {
+    GraphsDemoComponent.prototype.ngOnInit = function () {
+        this.initializeGroupedBarChart();
+        this.initializePolarChart();
+        this.initializeBubbleChart();
+        this.initializeLineChart();
+    };
+    GraphsDemoComponent.prototype.initializeGroupedBarChart = function () {
         var canvas = document.getElementById('bar-chart-grouped');
         var chart = new __WEBPACK_IMPORTED_MODULE_1_chart_js___default.a(canvas, {
             type: 'bar',
@@ -780,6 +787,211 @@ var HomeComponent = (function () {
                 }
             }
         });
+    };
+    GraphsDemoComponent.prototype.initializePolarChart = function () {
+        var polarChart = new __WEBPACK_IMPORTED_MODULE_1_chart_js___default.a(document.getElementById('polar-chart'), {
+            type: 'polarArea',
+            data: {
+                labels: ['Africa', 'Asia', 'Europe', 'Latin America', 'North America'],
+                datasets: [
+                    {
+                        label: 'Population (millions)',
+                        backgroundColor: ['#3e95cd', '#8e5ea2', '#3cba9f', '#e8c3b9', '#c45850'],
+                        data: [2478, 5267, 734, 784, 433]
+                    }
+                ]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Predicted world population (millions) in 2050'
+                }
+            }
+        });
+    };
+    GraphsDemoComponent.prototype.initializeBubbleChart = function () {
+        var bubbleChart = new __WEBPACK_IMPORTED_MODULE_1_chart_js___default.a(document.getElementById('doughnut-chart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Africa', 'Asia', 'Europe', 'Latin America', 'North America'],
+                datasets: [
+                    {
+                        label: 'Population (millions)',
+                        backgroundColor: ['#3e95cd', '#8e5ea2', '#3cba9f', '#e8c3b9', '#c45850'],
+                        data: [2478, 5267, 734, 784, 433]
+                    }
+                ]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Predicted world population (millions) in 2050'
+                }
+            }
+        });
+    };
+    GraphsDemoComponent.prototype.initializeLineChart = function () {
+        var lineChart = new __WEBPACK_IMPORTED_MODULE_1_chart_js___default.a(document.getElementById('line-chart'), {
+            type: 'line',
+            data: {
+                labels: [1500, 1600, 1700, 1750, 1800, 1850, 1900, 1950, 1999, 2050],
+                datasets: [{
+                        data: [86, 114, 106, 106, 107, 111, 133, 221, 783, 2478],
+                        label: 'Africa',
+                        borderColor: '#3e95cd',
+                        fill: false
+                    }, {
+                        data: [282, 350, 411, 502, 635, 809, 947, 1402, 3700, 5267],
+                        label: 'Asia',
+                        borderColor: '#8e5ea2',
+                        fill: false
+                    }, {
+                        data: [168, 170, 178, 190, 203, 276, 408, 547, 675, 734],
+                        label: 'Europe',
+                        borderColor: '#3cba9f',
+                        fill: false
+                    }, {
+                        data: [40, 20, 10, 16, 24, 38, 74, 167, 508, 784],
+                        label: 'Latin America',
+                        borderColor: '#e8c3b9',
+                        fill: false
+                    }, {
+                        data: [6, 3, 2, 2, 7, 26, 82, 172, 312, 433],
+                        label: 'North America',
+                        borderColor: '#c45850',
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'World population per region (in millions)'
+                }
+            }
+        });
+    };
+    return GraphsDemoComponent;
+}());
+GraphsDemoComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-graphs-demo',
+        template: __webpack_require__("../../../../../src/app/pages/graphs-demo/graphs-demo.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/pages/graphs-demo/graphs-demo.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], GraphsDemoComponent);
+
+//# sourceMappingURL=graphs-demo.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/graphs-demo/graphs-demo.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GraphsDemoModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__graphs_demo_component__ = __webpack_require__("../../../../../src/app/pages/graphs-demo/graphs-demo.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var GraphsDemoModule = (function () {
+    function GraphsDemoModule() {
+    }
+    return GraphsDemoModule;
+}());
+GraphsDemoModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_1__graphs_demo_component__["a" /* GraphsDemoComponent */]
+        ],
+        exports: [__WEBPACK_IMPORTED_MODULE_1__graphs_demo_component__["a" /* GraphsDemoComponent */]]
+    })
+], GraphsDemoModule);
+
+//# sourceMappingURL=graphs-demo.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/graphs-demo/graphs-demo.routes.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GraphsDemoRoutes; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__graphs_demo_component__ = __webpack_require__("../../../../../src/app/pages/graphs-demo/graphs-demo.component.ts");
+
+var GraphsDemoRoutes = [
+    { path: 'graphs-demo', component: __WEBPACK_IMPORTED_MODULE_0__graphs_demo_component__["a" /* GraphsDemoComponent */] }
+];
+//# sourceMappingURL=graphs-demo.routes.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/graphs-demo/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__graphs_demo_module__ = __webpack_require__("../../../../../src/app/pages/graphs-demo/graphs-demo.module.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__graphs_demo_module__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__graphs_demo_routes__ = __webpack_require__("../../../../../src/app/pages/graphs-demo/graphs-demo.routes.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__graphs_demo_routes__["a"]; });
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/home/home.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/home/home.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/intro-bg.jpg')\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n        <div class=\"site-heading\">\r\n          <h1> Explore Reusable Angular 2 Modules</h1>\r\n          <hr class=\"small\">\r\n          <span class=\"subheading\">A collection of variety of angular 2 modules, directives etc which are ready to use</span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</header>\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n      <div class=\"post-preview\">\r\n        <a href=\"https://toddmotto.com/transclusion-in-angular-2-with-ng-content\">\r\n          <h2 class=\"post-title\">\r\n            Angular Content Projection\r\n          </h2>\r\n        </a>\r\n        <h3 class=\"post-subtitle\">\r\n          Projection is a very important concept in Angular. It enables developers to build reusable components and make applications\r\n          more scalable and flexible\r\n        </h3>\r\n\r\n        <p class=\"post-meta\">Posted by <a href=\"https://twitter.com/intent/follow?original_referer=https%3A%2F%2Ftoddmotto.com%2Ftransclusion-in-angular-2-with-ng-content&ref_src=twsrc%5Etfw&region=follow_link&screen_name=toddmotto&tw_p=followbutton\">toddmotto</a>          on Mar 22, 2016</p>\r\n      </div>\r\n      <hr>\r\n      <div class=\"post-preview\">\r\n        <a href=\"https://johnpapa.net/introducing-angular-modules-feature-modules-2/\">\r\n          <h2 class=\"post-title\">\r\n           Angular Modules\r\n          </h2>\r\n        </a>\r\n        <h3 class=\"post-subtitle\">\r\n          NgModules help organize an application into cohesive blocks of functionality.\r\n        </h3>\r\n\r\n        <p class=\"post-meta\">Posted by <a href=\"https://twitter.com/john_papa\">john papa</a> on 17 SEPTEMBER 2016</p>\r\n      </div>\r\n      <hr>\r\n    </div>\r\n  </div>\r\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/home/home.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var HomeComponent = (function () {
+    function HomeComponent() {
+    }
+    HomeComponent.prototype.ngOnInit = function () {
     };
     return HomeComponent;
 }());
@@ -865,14 +1077,18 @@ var HomeRoutes = [
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__about_index__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__about_index__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_index__ = __webpack_require__("../../../../../src/app/pages/home/index.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_1__home_index__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_1__home_index__["b"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_1__home_index__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_1__home_index__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__focus_demo_index__ = __webpack_require__("../../../../../src/app/pages/focus-demo/index.ts");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__focus_demo_index__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_2__focus_demo_index__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modal_demo_index__ = __webpack_require__("../../../../../src/app/pages/modal-demo/index.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_3__modal_demo_index__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_3__modal_demo_index__["b"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_3__modal_demo_index__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_3__modal_demo_index__["b"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__graphs_demo_index__ = __webpack_require__("../../../../../src/app/pages/graphs-demo/index.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_4__graphs_demo_index__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_4__graphs_demo_index__["b"]; });
+
 
 
 
