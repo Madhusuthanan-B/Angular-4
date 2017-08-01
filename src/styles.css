@@ -82,3 +82,6 @@ pre {
     border-radius: 50px;
     padding: 0 5px;
 }
+.graph-name {
+    text-decoration: underline;
+}
