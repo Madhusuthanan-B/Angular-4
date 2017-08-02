@@ -33,7 +33,7 @@ jobs:
 
       - store_test_results:
           path: ~/repo/karma_html/report-summary-filename
-      - deployment:
+      deployment:
           production:
           branch: master
           commands:
