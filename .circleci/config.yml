@@ -33,10 +33,4 @@ jobs:
 
       - store_test_results:
           path: ~/repo/karma_html/report-summary-filename
-      deployment:
-          production:
-          branch: master
-          commands:
-            - ./scripts/deploy-ghpages.sh build
-
-
+          
