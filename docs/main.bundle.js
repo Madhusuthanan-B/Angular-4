@@ -114,11 +114,11 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_7__app_routing__["b" /* routing */],
             __WEBPACK_IMPORTED_MODULE_4__navbar_index__["a" /* NavBarModule */],
-            __WEBPACK_IMPORTED_MODULE_5__pages_index__["g" /* HomeModule */],
+            __WEBPACK_IMPORTED_MODULE_5__pages_index__["i" /* HomeModule */],
             __WEBPACK_IMPORTED_MODULE_5__pages_index__["a" /* AboutModule */],
-            __WEBPACK_IMPORTED_MODULE_5__pages_index__["c" /* FocusDemoModule */],
-            __WEBPACK_IMPORTED_MODULE_5__pages_index__["i" /* ModalDemoModule */],
-            __WEBPACK_IMPORTED_MODULE_5__pages_index__["e" /* GraphsDemoModule */]
+            __WEBPACK_IMPORTED_MODULE_5__pages_index__["e" /* FocusDemoModule */],
+            __WEBPACK_IMPORTED_MODULE_5__pages_index__["g" /* GraphsDemoModule */],
+            __WEBPACK_IMPORTED_MODULE_5__pages_index__["d" /* CheckboxListDemoModule */]
         ],
         providers: [__WEBPACK_IMPORTED_MODULE_7__app_routing__["a" /* appRoutingProviders */], { provide: __WEBPACK_IMPORTED_MODULE_2__angular_common__["g" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_2__angular_common__["d" /* HashLocationStrategy */] }],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
@@ -139,10 +139,124 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_index__ = __webpack_require__("../../../../../src/app/pages/index.ts");
 
 
-var appRoutes = __WEBPACK_IMPORTED_MODULE_1__pages_index__["h" /* HomeRoutes */].concat(__WEBPACK_IMPORTED_MODULE_1__pages_index__["b" /* AboutRoutes */], __WEBPACK_IMPORTED_MODULE_1__pages_index__["d" /* FocusDemoRoutes */], __WEBPACK_IMPORTED_MODULE_1__pages_index__["j" /* ModalDemoRoutes */], __WEBPACK_IMPORTED_MODULE_1__pages_index__["f" /* GraphsDemoRoutes */]);
+var appRoutes = __WEBPACK_IMPORTED_MODULE_1__pages_index__["j" /* HomeRoutes */].concat(__WEBPACK_IMPORTED_MODULE_1__pages_index__["b" /* AboutRoutes */], __WEBPACK_IMPORTED_MODULE_1__pages_index__["f" /* FocusDemoRoutes */], __WEBPACK_IMPORTED_MODULE_1__pages_index__["h" /* GraphsDemoRoutes */], __WEBPACK_IMPORTED_MODULE_1__pages_index__["c" /* CheckBoxListRoutes */]);
 var appRoutingProviders = [];
 var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */].forRoot(appRoutes);
 //# sourceMappingURL=app.routing.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/modules/checkbox-list/checkbox-list.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/modules/checkbox-list/checkbox-list.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ng-container *ngIf=\"enableCheckBoxList\">\n  <div class=\"form-check\" [ngClass]=\"{'disabled': checkbox.disabled}\" *ngFor=\"let checkbox of checkBoxList.checkboxes\">\n    <label class=\"form-check-label\">\n    <input id=\"{{checkbox.id}}\" class=\"form-check-input\" type=\"checkbox\" name=\"{{checkbox.name}}\" \n      value=\"{{checkbox.value}}\" [disabled]=\"checkbox.disabled\" [checked]=\"checkbox.checked\">\n      {{checkbox.label}}\n    </label>\n  </div>\n</ng-container>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/modules/checkbox-list/checkbox-list.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CheckboxListComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var CheckboxListComponent = (function () {
+    function CheckboxListComponent() {
+        this.enableCheckBoxList = false;
+    }
+    CheckboxListComponent.prototype.ngOnInit = function () {
+        if (!!this.checkBoxList) {
+            this.enableCheckBoxList = true;
+        }
+    };
+    return CheckboxListComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
+    __metadata("design:type", Object)
+], CheckboxListComponent.prototype, "checkBoxList", void 0);
+CheckboxListComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-checkbox-list',
+        template: __webpack_require__("../../../../../src/app/modules/checkbox-list/checkbox-list.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/modules/checkbox-list/checkbox-list.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], CheckboxListComponent);
+
+//# sourceMappingURL=checkbox-list.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/modules/checkbox-list/checkbox-list.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CheckBoxListModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__checkbox_list_component__ = __webpack_require__("../../../../../src/app/modules/checkbox-list/checkbox-list.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var CheckBoxListModule = (function () {
+    function CheckBoxListModule() {
+    }
+    return CheckBoxListModule;
+}());
+CheckBoxListModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
+        declarations: [__WEBPACK_IMPORTED_MODULE_2__checkbox_list_component__["a" /* CheckboxListComponent */]],
+        imports: [__WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */]],
+        exports: [__WEBPACK_IMPORTED_MODULE_2__checkbox_list_component__["a" /* CheckboxListComponent */]]
+    })
+], CheckBoxListModule);
+
+//# sourceMappingURL=checkbox-list.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/modules/checkbox-list/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__checkbox_list_module__ = __webpack_require__("../../../../../src/app/modules/checkbox-list/checkbox-list.module.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__checkbox_list_module__["a"]; });
+
+//# sourceMappingURL=index.js.map
 
 /***/ }),
 
@@ -252,115 +366,12 @@ FocusSetterModule = __decorate([
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__focus_setter_index__ = __webpack_require__("../../../../../src/app/modules/focus-setter/index.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__focus_setter_index__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modal_index__ = __webpack_require__("../../../../../src/app/modules/modal/index.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__modal_index__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__focus_setter_index__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__checkbox_list_index__ = __webpack_require__("../../../../../src/app/modules/checkbox-list/index.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__checkbox_list_index__["a"]; });
 
 
 //# sourceMappingURL=index.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/modules/modal/index.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modal_module__ = __webpack_require__("../../../../../src/app/modules/modal/modal.module.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__modal_module__["a"]; });
-
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/modules/modal/modal.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/modules/modal/modal.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"modal fade\" id=\"myModal\" role=\"dialog\">\r\n    <div class=\"modal-dialog\">\r\n    \r\n      <!-- Modal content-->\r\n      <div class=\"modal-content\">\r\n        <ng-content> </ng-content>\r\n      </div>\r\n      \r\n    </div>\r\n  </div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/modules/modal/modal.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ModalComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ModalComponent = (function () {
-    function ModalComponent() {
-    }
-    ModalComponent.prototype.ngOnInit = function () {
-    };
-    return ModalComponent;
-}());
-ModalComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-modal',
-        template: __webpack_require__("../../../../../src/app/modules/modal/modal.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/modules/modal/modal.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], ModalComponent);
-
-//# sourceMappingURL=modal.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/modules/modal/modal.module.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ModalModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modal_component__ = __webpack_require__("../../../../../src/app/modules/modal/modal.component.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-var ModalModule = (function () {
-    function ModalModule() {
-    }
-    return ModalModule;
-}());
-ModalModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
-        declarations: [__WEBPACK_IMPORTED_MODULE_1__modal_component__["a" /* ModalComponent */]],
-        exports: [__WEBPACK_IMPORTED_MODULE_1__modal_component__["a" /* ModalComponent */]]
-    })
-], ModalModule);
-
-//# sourceMappingURL=modal.module.js.map
 
 /***/ }),
 
@@ -396,7 +407,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top navbar-inverse\">\r\n  <div class=\"container\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\"\r\n        aria-controls=\"navbar\">\r\n            <span class=\"sr-only\">Toggle navigation</span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n          </button>\r\n      <a class=\"navbar-brand\" [routerLink]=\"['/']\">NG-2 Reusable Modules</a>\r\n    </div>\r\n    <div id=\"navbar\" class=\"navbar-collapse collapse\">\r\n      <ul class=\"nav navbar-nav\">\r\n        <li><a routerLink=\"/\" routerLinkActive=\"/\">Home</a></li>\r\n        <li><a routerLink=\"/about\" routerLinkActive=\"about\">About</a></li>\r\n        <li><a routerLink=\"/graphs-demo\" routerLinkActive=\"graphs-demo\">Graphs</a></li>\r\n        <li class=\"dropdown\">\r\n          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Modules <span class=\"caret\"></span></a>\r\n          <ul class=\"dropdown-menu\">\r\n            <li role=\"separator\" class=\"divider\"></li>\r\n            <li class=\"dropdown-header\">Directives</li>\r\n            <li><a routerLink=\"/focus-setter\">Focus Setter</a></li>\r\n          </ul>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n</nav>"
+module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top navbar-inverse\">\r\n  <div class=\"container\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\"\r\n        aria-controls=\"navbar\">\r\n            <span class=\"sr-only\">Toggle navigation</span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n          </button>\r\n      <a class=\"navbar-brand\" [routerLink]=\"['/']\">NG-2 Reusable Modules</a>\r\n    </div>\r\n    <div id=\"navbar\" class=\"navbar-collapse collapse\">\r\n      <ul class=\"nav navbar-nav\">\r\n        <li><a routerLink=\"/\" routerLinkActive=\"/\">Home</a></li>\r\n        <li><a routerLink=\"/about\" routerLinkActive=\"about\">About</a></li>\r\n        <li><a routerLink=\"/graphs-demo\" routerLinkActive=\"graphs-demo\">Graphs</a></li>\r\n        <li class=\"dropdown\">\r\n          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Modules <span class=\"caret\"></span></a>            \r\n          <ul class=\"dropdown-menu\">\r\n            <li><a routerLink=\"/check-box-list\">Check Box List</a></li>\r\n            <li role=\"separator\" class=\"divider\"></li>\r\n            <li class=\"dropdown-header\">Directives</li>\r\n            <li><a routerLink=\"/focus-setter\">Focus Setter</a></li>\r\n          </ul>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n</nav>"
 
 /***/ }),
 
@@ -594,6 +605,142 @@ var AboutRoutes = [
 
 /***/ }),
 
+/***/ "../../../../../src/app/pages/checkbox-list-demo/checkbox-list-demo.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/checkbox-list-demo/checkbox-list-demo.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/modal-bg.jpg')\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n        <div class=\"site-heading\">\n          <h1> Check Box List </h1>\n          <hr class=\"small\">\n          <span class=\"subheading\">Check box list can be generated dynamically</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h2 class=\"example\">Example</h2>\n      <div class=\"post-preview\">\n        <app-checkbox-list [checkBoxList]=\"checkboxes\"> </app-checkbox-list>\n      </div>\n      <div class=\"post-preview\">\n        <h2 class=\"example\">Code Snippet</h2>\n        <pre>&lt;app-checkbox-list <strong class=\"highlight\"> [checkBoxList]=\"checkboxes\"</strong>&gt; &lt;/app-checkbox-list&gt;</pre>\n      </div>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/checkbox-list-demo/checkbox-list-demo.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CheckboxListDemoComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var CheckboxListDemoComponent = (function () {
+    function CheckboxListDemoComponent() {
+        this.checkboxes = {
+            checkboxes: [
+                { id: 'chkMobileNotification', name: 'Option1', value: 'Option 1', label: 'Enable Mobile Notifications' },
+                {
+                    id: 'chkWebNotification', name: 'Option1', value: 'Enable Web Notifications',
+                    label: 'Enable Web Notifications', checked: true
+                },
+                {
+                    id: 'chkFbNotification', name: 'Option1', value: 'Enable Facebook Notification',
+                    label: 'Enable Facebook Notification', disabled: true
+                }
+            ]
+        };
+    }
+    CheckboxListDemoComponent.prototype.ngOnInit = function () {
+    };
+    return CheckboxListDemoComponent;
+}());
+CheckboxListDemoComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-checkbox-list-demo',
+        template: __webpack_require__("../../../../../src/app/pages/checkbox-list-demo/checkbox-list-demo.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/pages/checkbox-list-demo/checkbox-list-demo.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], CheckboxListDemoComponent);
+
+//# sourceMappingURL=checkbox-list-demo.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/checkbox-list-demo/checkbox-list-demo.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CheckboxListDemoModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__checkbox_list_demo_component__ = __webpack_require__("../../../../../src/app/pages/checkbox-list-demo/checkbox-list-demo.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_index__ = __webpack_require__("../../../../../src/app/modules/index.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var CheckboxListDemoModule = (function () {
+    function CheckboxListDemoModule() {
+    }
+    return CheckboxListDemoModule;
+}());
+CheckboxListDemoModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
+        declarations: [__WEBPACK_IMPORTED_MODULE_1__checkbox_list_demo_component__["a" /* CheckboxListDemoComponent */]],
+        imports: [__WEBPACK_IMPORTED_MODULE_2__modules_index__["a" /* CheckBoxListModule */]],
+        exports: [__WEBPACK_IMPORTED_MODULE_1__checkbox_list_demo_component__["a" /* CheckboxListDemoComponent */]]
+    })
+], CheckboxListDemoModule);
+
+//# sourceMappingURL=checkbox-list-demo.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/checkbox-list-demo/checkbox-list-demo.routes.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CheckBoxListRoutes; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__checkbox_list_demo_component__ = __webpack_require__("../../../../../src/app/pages/checkbox-list-demo/checkbox-list-demo.component.ts");
+
+var CheckBoxListRoutes = [
+    { path: 'check-box-list', component: __WEBPACK_IMPORTED_MODULE_0__checkbox_list_demo_component__["a" /* CheckboxListDemoComponent */] }
+];
+//# sourceMappingURL=checkbox-list-demo.routes.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/checkbox-list-demo/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__checkbox_list_demo_module__ = __webpack_require__("../../../../../src/app/pages/checkbox-list-demo/checkbox-list-demo.module.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__checkbox_list_demo_module__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__checkbox_list_demo_routes__ = __webpack_require__("../../../../../src/app/pages/checkbox-list-demo/checkbox-list-demo.routes.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__checkbox_list_demo_routes__["a"]; });
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/pages/focus-demo/focus-demo.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -680,7 +827,7 @@ var FocusDemoModule = (function () {
 FocusDemoModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
         declarations: [__WEBPACK_IMPORTED_MODULE_2__focus_demo_component__["a" /* FocusDemoComponent */]],
-        imports: [__WEBPACK_IMPORTED_MODULE_1__modules_index__["a" /* FocusSetterModule */]],
+        imports: [__WEBPACK_IMPORTED_MODULE_1__modules_index__["b" /* FocusSetterModule */]],
         exports: [__WEBPACK_IMPORTED_MODULE_2__focus_demo_component__["a" /* FocusDemoComponent */]]
     })
 ], FocusDemoModule);
@@ -1085,146 +1232,23 @@ var HomeRoutes = [
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__about_index__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__about_index__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_index__ = __webpack_require__("../../../../../src/app/pages/home/index.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_1__home_index__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_1__home_index__["b"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_1__home_index__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_1__home_index__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__focus_demo_index__ = __webpack_require__("../../../../../src/app/pages/focus-demo/index.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__focus_demo_index__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_2__focus_demo_index__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modal_demo_index__ = __webpack_require__("../../../../../src/app/pages/modal-demo/index.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_3__modal_demo_index__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_3__modal_demo_index__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__graphs_demo_index__ = __webpack_require__("../../../../../src/app/pages/graphs-demo/index.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_4__graphs_demo_index__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_4__graphs_demo_index__["b"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_2__focus_demo_index__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_2__focus_demo_index__["b"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__graphs_demo_index__ = __webpack_require__("../../../../../src/app/pages/graphs-demo/index.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_3__graphs_demo_index__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_3__graphs_demo_index__["b"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__checkbox_list_demo_index__ = __webpack_require__("../../../../../src/app/pages/checkbox-list-demo/index.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_4__checkbox_list_demo_index__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_4__checkbox_list_demo_index__["b"]; });
 
 
 
 
 
 //# sourceMappingURL=index.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/modal-demo/index.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modal_demo_module__ = __webpack_require__("../../../../../src/app/pages/modal-demo/modal-demo.module.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__modal_demo_module__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modal_demo_routes__ = __webpack_require__("../../../../../src/app/pages/modal-demo/modal-demo.routes.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__modal_demo_routes__["a"]; });
-
-
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/modal-demo/modal-demo.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/modal-demo/modal-demo.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<app-modal>\r\n  <div class=\"modal-header\">\r\n    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n    <h4 class=\"modal-title\">Modal Header</h4>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Some text in the modal.</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n  </div>\r\n</app-modal>\r\n\r\n<header class=\"intro-header\" style=\"background-image: url('assets/images/modal-bg.jpg')\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n        <div class=\"site-heading\">\r\n          <h1>Bootstrap Modal Module</h1>\r\n          <hr class=\"small\">\r\n          <span class=\"subheading\">With this module, you will be able to angular 2 bootstrap overlay</span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</header>\r\n\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-6 col-lg-offset-4 col-md-8 col-md-offset-3\">\r\n      <button type=\"button\" class=\"btn btn-info btn-lg\" data-toggle=\"modal\" data-target=\"#myModal\">Open Modal</button>\r\n    </div>\r\n  </div>\r\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/modal-demo/modal-demo.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ModalDemoComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ModalDemoComponent = (function () {
-    function ModalDemoComponent() {
-    }
-    ModalDemoComponent.prototype.ngOnInit = function () {
-    };
-    return ModalDemoComponent;
-}());
-ModalDemoComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-modal-demo',
-        template: __webpack_require__("../../../../../src/app/pages/modal-demo/modal-demo.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/pages/modal-demo/modal-demo.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], ModalDemoComponent);
-
-//# sourceMappingURL=modal-demo.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/modal-demo/modal-demo.module.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ModalDemoModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_index__ = __webpack_require__("../../../../../src/app/modules/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modal_demo_component__ = __webpack_require__("../../../../../src/app/pages/modal-demo/modal-demo.component.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-var ModalDemoModule = (function () {
-    function ModalDemoModule() {
-    }
-    return ModalDemoModule;
-}());
-ModalDemoModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
-        declarations: [__WEBPACK_IMPORTED_MODULE_2__modal_demo_component__["a" /* ModalDemoComponent */]],
-        imports: [__WEBPACK_IMPORTED_MODULE_1__modules_index__["b" /* ModalModule */]],
-        exports: [__WEBPACK_IMPORTED_MODULE_2__modal_demo_component__["a" /* ModalDemoComponent */]]
-    })
-], ModalDemoModule);
-
-//# sourceMappingURL=modal-demo.module.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/modal-demo/modal-demo.routes.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ModalDemoRoutes; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modal_demo_component__ = __webpack_require__("../../../../../src/app/pages/modal-demo/modal-demo.component.ts");
-
-var ModalDemoRoutes = [
-    { path: 'modal', component: __WEBPACK_IMPORTED_MODULE_0__modal_demo_component__["a" /* ModalDemoComponent */] }
-];
-//# sourceMappingURL=modal-demo.routes.js.map
 
 /***/ }),
 
