@@ -167,13 +167,21 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 
 
-// tslint:disable-next-line:directive-selector
 var SetFocusToDirective = (function () {
     function SetFocusToDirective(document) {
         this.document = document;
     }
     SetFocusToDirective.prototype.onClick = function () {
-        this.document.getElementById(this.targetElement).focus();
+        this.element = this.document.getElementById(this.targetElement);
+        if (!!this.element) {
+            this.setFocus();
+        }
+        else {
+            console.log("The target id not found: " + this.targetElement);
+        }
+    };
+    SetFocusToDirective.prototype.setFocus = function () {
+        this.element.focus();
     };
     return SetFocusToDirective;
 }());
@@ -388,7 +396,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top navbar-inverse\">\r\n  <div class=\"container\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\"\r\n        aria-controls=\"navbar\">\r\n            <span class=\"sr-only\">Toggle navigation</span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n          </button>\r\n      <a class=\"navbar-brand\" [routerLink]=\"['/']\">NG-2 Reusable Modules</a>\r\n    </div>\r\n    <div id=\"navbar\" class=\"navbar-collapse collapse\">\r\n      <ul class=\"nav navbar-nav\">\r\n        <li><a routerLink=\"/\" routerLinkActive=\"/\">Home</a></li>\r\n        <li><a routerLink=\"/about\" routerLinkActive=\"about\">About</a></li>\r\n        <li><a routerLink=\"/graphs-demo\" routerLinkActive=\"graphs-demo\">Graphs</a></li>\r\n        <li class=\"dropdown\">\r\n          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Modules <span class=\"caret\"></span></a>\r\n          <ul class=\"dropdown-menu\">            \r\n            <li><a routerLink=\"/modal\">Bootstrap Modal</a></li>            \r\n            <li role=\"separator\" class=\"divider\"></li>\r\n            <li class=\"dropdown-header\">Directives</li>\r\n            <li><a routerLink=\"/focus-setter\">Focus Setter</a></li>\r\n          </ul>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n</nav>"
+module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top navbar-inverse\">\r\n  <div class=\"container\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\"\r\n        aria-controls=\"navbar\">\r\n            <span class=\"sr-only\">Toggle navigation</span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n          </button>\r\n      <a class=\"navbar-brand\" [routerLink]=\"['/']\">NG-2 Reusable Modules</a>\r\n    </div>\r\n    <div id=\"navbar\" class=\"navbar-collapse collapse\">\r\n      <ul class=\"nav navbar-nav\">\r\n        <li><a routerLink=\"/\" routerLinkActive=\"/\">Home</a></li>\r\n        <li><a routerLink=\"/about\" routerLinkActive=\"about\">About</a></li>\r\n        <li><a routerLink=\"/graphs-demo\" routerLinkActive=\"graphs-demo\">Graphs</a></li>\r\n        <li class=\"dropdown\">\r\n          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Modules <span class=\"caret\"></span></a>\r\n          <ul class=\"dropdown-menu\">\r\n            <li role=\"separator\" class=\"divider\"></li>\r\n            <li class=\"dropdown-header\">Directives</li>\r\n            <li><a routerLink=\"/focus-setter\">Focus Setter</a></li>\r\n          </ul>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n</nav>"
 
 /***/ }),
 
@@ -1132,7 +1140,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/modal-demo/modal-demo.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-modal>\n  <div class=\"modal-header\">\n    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n    <h4 class=\"modal-title\">Modal Header</h4>\n  </div>\n  <div class=\"modal-body\">\n    <p>Some text in the modal.</p>\n  </div>\n  <div class=\"modal-footer\">\n    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n  </div>\n</app-modal>\n\n<header class=\"intro-header\" style=\"background-image: url('assets/images/modal-bg.jpg')\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n        <div class=\"site-heading\">\n          <h1>Bootstrap Modal Module</h1>\n          <hr class=\"small\">\n          <span class=\"subheading\">With this module, you will be able to angular 2 bootstrap overlay</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-lg-6 col-lg-offset-4 col-md-8 col-md-offset-3\">\n      <button type=\"button\" class=\"btn btn-info btn-lg\" data-toggle=\"modal\" data-target=\"#myModal\">Open Modal</button>\n    </div>\n  </div>\n</div>"
+module.exports = "<app-modal>\r\n  <div class=\"modal-header\">\r\n    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n    <h4 class=\"modal-title\">Modal Header</h4>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Some text in the modal.</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n  </div>\r\n</app-modal>\r\n\r\n<header class=\"intro-header\" style=\"background-image: url('assets/images/modal-bg.jpg')\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n        <div class=\"site-heading\">\r\n          <h1>Bootstrap Modal Module</h1>\r\n          <hr class=\"small\">\r\n          <span class=\"subheading\">With this module, you will be able to angular 2 bootstrap overlay</span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</header>\r\n\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-6 col-lg-offset-4 col-md-8 col-md-offset-3\">\r\n      <button type=\"button\" class=\"btn btn-info btn-lg\" data-toggle=\"modal\" data-target=\"#myModal\">Open Modal</button>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
