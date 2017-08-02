@@ -17,7 +17,9 @@ describe('CheckboxListComponent: ', () => {
     fixture = TestBed.createComponent(CheckboxListComponent);
     component = fixture.componentInstance;
     component.checkBoxList = {
-      checkboxes: [{ name: 'Option1', value: 'Option 1', label: '' }]
+      checkboxes: [
+        { id: 'chkOption1', name: 'Option1', value: 'Option 1', label: 'Option 1' }
+      ]
     };
     fixture.detectChanges();
   });
