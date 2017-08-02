@@ -28,10 +28,10 @@ jobs:
       - run: npm build
 
       - store_artifacts: 
-          path: /karma_html/report-summary-filename
+          path: ~/repo/karma_html/report-summary-filename
           destination: prefix
 
       - store_test_results:
-          path: /karma_html/report-summary-filename
+          path: ~/repo/karma_html/report-summary-filename
 
 
