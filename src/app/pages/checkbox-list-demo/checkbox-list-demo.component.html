@@ -13,14 +13,14 @@
 </header>
 <div class="container">
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <h2 class="example">Example</h2>
-      <div class="post-preview">
-        <app-checkbox-list [checkBoxList]="checkboxes"> </app-checkbox-list>
+    <div class="col-sm-12">
+      <div class="col-sm-6">
+        <h3 class="example">Live JSON</h3>
+        <textarea id="chkInputTextArea" [(ngModel)]="checkBoxListValues" style="width:100%" rows="15"></textarea>
       </div>
-      <div class="post-preview">
-        <h2 class="example">Code Snippet</h2>
-        <pre>&lt;app-checkbox-list <strong class="highlight"> [checkBoxList]="checkboxes"</strong>&gt; &lt;/app-checkbox-list&gt;</pre>
+      <div class="col-sm-6">
+          <h3 class="example">Output</h3>
+        <app-checkbox-list [checkBoxList]="checkboxes"> </app-checkbox-list>
       </div>
     </div>
   </div>

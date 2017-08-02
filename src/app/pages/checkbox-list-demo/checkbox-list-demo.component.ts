@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./checkbox-list-demo.component.css']
 })
 export class CheckboxListDemoComponent implements OnInit {
-  private checkboxes: CheckBoxList = {
+  private checkboxData: CheckBoxList = {
     checkboxes: [
       { id: 'chkMobileNotification', name: 'Option1', value: 'Option 1', label: 'Enable Mobile Notifications' },
       {
@@ -19,9 +19,24 @@ export class CheckboxListDemoComponent implements OnInit {
       }
     ]
   };
+  private checkboxes: any = this.checkboxData;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  get checkBoxListValues() {
+    return JSON.stringify(this.checkboxData, null, 2);
+  }
+
+  set checkBoxListValues(v) {
+    try {
+      this.checkboxes = JSON.parse(v);
+    } catch (error) {
+      console.log('Error while typing JSON');
+    }
+
   }
 
 }

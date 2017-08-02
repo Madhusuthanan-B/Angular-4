@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {} from './checkbox-list.component.d';
+import { } from './checkbox-list.component.d';
 
 @Component({
   selector: 'app-checkbox-list',
