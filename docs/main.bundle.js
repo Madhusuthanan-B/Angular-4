@@ -626,7 +626,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/checkbox-list-demo/checkbox-list-demo.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/modal-bg.jpg')\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n        <div class=\"site-heading\">\n          <h1> Check Box List </h1>\n          <hr class=\"small\">\n          <span class=\"subheading\">Check box list can be generated dynamically</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h2 class=\"example\">Example</h2>\n      <div class=\"post-preview\">\n        <app-checkbox-list [checkBoxList]=\"checkboxes\"> </app-checkbox-list>\n      </div>\n      <div class=\"post-preview\">\n        <h2 class=\"example\">Code Snippet</h2>\n        <pre>&lt;app-checkbox-list <strong class=\"highlight\"> [checkBoxList]=\"checkboxes\"</strong>&gt; &lt;/app-checkbox-list&gt;</pre>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/modal-bg.jpg')\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n        <div class=\"site-heading\">\n          <h1> Check Box List </h1>\n          <hr class=\"small\">\n          <span class=\"subheading\">Check box list can be generated dynamically</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-12\">\n      <div class=\"col-sm-6\">\n        <h3 class=\"example\">Live JSON</h3>\n        <textarea id=\"chkInputTextArea\" [(ngModel)]=\"checkBoxListValues\" style=\"width:100%\" rows=\"15\"></textarea>\n      </div>\n      <div class=\"col-sm-6\">\n          <h3 class=\"example\">Output</h3>\n        <app-checkbox-list [checkBoxList]=\"checkboxes\"> </app-checkbox-list>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -648,7 +648,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var CheckboxListDemoComponent = (function () {
     function CheckboxListDemoComponent() {
-        this.checkboxes = {
+        this.checkboxData = {
             checkboxes: [
                 { id: 'chkMobileNotification', name: 'Option1', value: 'Option 1', label: 'Enable Mobile Notifications' },
                 {
@@ -661,9 +661,25 @@ var CheckboxListDemoComponent = (function () {
                 }
             ]
         };
+        this.checkboxes = this.checkboxData;
     }
     CheckboxListDemoComponent.prototype.ngOnInit = function () {
     };
+    Object.defineProperty(CheckboxListDemoComponent.prototype, "checkBoxListValues", {
+        get: function () {
+            return JSON.stringify(this.checkboxData, null, 2);
+        },
+        set: function (v) {
+            try {
+                this.checkboxes = JSON.parse(v);
+            }
+            catch (error) {
+                console.log('Error while typing JSON');
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
     return CheckboxListDemoComponent;
 }());
 CheckboxListDemoComponent = __decorate([
@@ -685,14 +701,18 @@ CheckboxListDemoComponent = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CheckboxListDemoModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__checkbox_list_demo_component__ = __webpack_require__("../../../../../src/app/pages/checkbox-list-demo/checkbox-list-demo.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_index__ = __webpack_require__("../../../../../src/app/modules/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__checkbox_list_demo_component__ = __webpack_require__("../../../../../src/app/pages/checkbox-list-demo/checkbox-list-demo.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_index__ = __webpack_require__("../../../../../src/app/modules/index.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -703,9 +723,9 @@ var CheckboxListDemoModule = (function () {
 }());
 CheckboxListDemoModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
-        declarations: [__WEBPACK_IMPORTED_MODULE_1__checkbox_list_demo_component__["a" /* CheckboxListDemoComponent */]],
-        imports: [__WEBPACK_IMPORTED_MODULE_2__modules_index__["a" /* CheckBoxListModule */]],
-        exports: [__WEBPACK_IMPORTED_MODULE_1__checkbox_list_demo_component__["a" /* CheckboxListDemoComponent */]]
+        declarations: [__WEBPACK_IMPORTED_MODULE_3__checkbox_list_demo_component__["a" /* CheckboxListDemoComponent */]],
+        imports: [__WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */], __WEBPACK_IMPORTED_MODULE_4__modules_index__["a" /* CheckBoxListModule */]],
+        exports: [__WEBPACK_IMPORTED_MODULE_3__checkbox_list_demo_component__["a" /* CheckboxListDemoComponent */]]
     })
 ], CheckboxListDemoModule);
 
