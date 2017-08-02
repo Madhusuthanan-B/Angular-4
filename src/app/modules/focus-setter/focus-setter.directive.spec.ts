@@ -26,8 +26,9 @@ describe('Focus Setter: ', () => {
 
         it('should call setFocus method to set the focus', () => {
             spyOn(console, 'log');
+            setFocusToDirective.targetElement = 'txtName';
             setFocusToDirective.onClick();
-            expect(console.log).toHaveBeenCalledWith('ID not found');
+            expect(console.log).toHaveBeenCalledWith('The target id not found: txtName');
         });
     });
 

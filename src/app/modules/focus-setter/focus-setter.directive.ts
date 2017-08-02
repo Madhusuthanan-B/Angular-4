@@ -17,7 +17,7 @@ export class SetFocusToDirective {
         if (!!this.element) {
             this.setFocus();
         } else {
-            console.log(`ID not found`);
+            console.log(`The target id not found: ${this.targetElement}`);
         }
     }
 
