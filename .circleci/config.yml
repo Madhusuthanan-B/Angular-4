@@ -27,4 +27,7 @@ jobs:
       - run: npm test
       - run: npm build
 
+      - store_artifacts: 
+          path: /karma_html/report-summary-filename
+
 
