@@ -30,4 +30,7 @@ jobs:
       - store_artifacts: 
           path: /karma_html/report-summary-filename
 
+      - store_test_results:
+          path: /karma_html/report-summary-filename
+
 
