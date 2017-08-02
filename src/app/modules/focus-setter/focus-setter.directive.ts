@@ -1,11 +1,11 @@
 import { Directive, ElementRef, Input, HostListener, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 
-// tslint:disable-next-line:directive-selector
 @Directive({ selector: '[set-focus-to]' })
 export class SetFocusToDirective {
     @Input() targetElement: string;
-    private document: Document;
+    document: Document;
+    element: HTMLElement;
 
     constructor( @Inject(DOCUMENT) document) {
         this.document = document;
@@ -13,6 +13,15 @@ export class SetFocusToDirective {
 
     @HostListener('click', ['$event'])
     onClick() {
-        this.document.getElementById(this.targetElement).focus();
+        this.element = this.document.getElementById(this.targetElement);
+        if (!!this.element) {
+            this.setFocus();
+        } else {
+            console.log(`ID not found`);
+        }
+    }
+
+    setFocus() {
+        this.element.focus();
     }
 }
