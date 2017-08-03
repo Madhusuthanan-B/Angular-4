@@ -146,6 +146,111 @@ var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule 
 
 /***/ }),
 
+/***/ "../../../../../src/app/footer/footer.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/footer/footer.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<footer class=\"footer\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div>\n        <p>An angular 4 project made with<i class=\"fa fa-heart\"></i> by <a target=\"_blank\" href=\"https://www.gitshowcase.com/madhusuthanan-b\">Madhu</a>\n          <a id=\"follow-button\" class=\"btn\" title=\"Follow Madhu (@madhuddevloper) on Twitter\" target=\"_blank\" href=\"https://twitter.com/madhuddeveloper\">\n            <i class=\"fa fa-twitter\"></i>\n            <span  id=\"l\">Follow <b>@madhuddevloper</b></span>\n          </a>\n        </p>\n      </div>\n    </div>\n  </div>\n</footer>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/footer/footer.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FooterComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var FooterComponent = (function () {
+    function FooterComponent() {
+    }
+    FooterComponent.prototype.ngOnInit = function () {
+    };
+    return FooterComponent;
+}());
+FooterComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-footer',
+        template: __webpack_require__("../../../../../src/app/footer/footer.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/footer/footer.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], FooterComponent);
+
+//# sourceMappingURL=footer.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/footer/footer.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FooterModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var FooterModule = (function () {
+    function FooterModule() {
+    }
+    return FooterModule;
+}());
+FooterModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_1__footer_component__["a" /* FooterComponent */]
+        ],
+        exports: [__WEBPACK_IMPORTED_MODULE_1__footer_component__["a" /* FooterComponent */]]
+    })
+], FooterModule);
+
+//# sourceMappingURL=footer.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/footer/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__footer_module__ = __webpack_require__("../../../../../src/app/footer/footer.module.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__footer_module__["a"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/modules/checkbox-list/checkbox-list.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -515,7 +620,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/about/about.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/banner-bg.jpg')\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n        <div class=\"site-heading\">\r\n          <h1> About Madhu</h1>\r\n          <hr class=\"small\">\r\n          <span class=\"subheading\">Hello! My name is Madhu, and I'm a bangalore based angular 2 developer </span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</header>\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n     <a target=\"_blank\" href=\"https://www.gitshowcase.com/madhusuthanan-b\">Click here</a> to know more details about my skills and view git repositories.\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/banner-bg.jpg')\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n        <div class=\"site-heading\">\r\n          <h1> About Madhu</h1>\r\n          <hr class=\"small\">\r\n          <span class=\"subheading\">Hello! My name is Madhu, and I'm a bangalore based angular 2 developer </span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</header>\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n     <a target=\"_blank\" href=\"https://www.gitshowcase.com/madhusuthanan-b\">Click here</a> to know more details about my skills and view git repositories.\r\n    </div>\r\n  </div>\r\n</div>\r\n<!-- <app-footer></app-footer> -->"
 
 /***/ }),
 
@@ -561,13 +666,15 @@ AboutComponent = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__about_component__ = __webpack_require__("../../../../../src/app/pages/about/about.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer_index__ = __webpack_require__("../../../../../src/app/footer/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_component__ = __webpack_require__("../../../../../src/app/pages/about/about.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 var AboutModule = (function () {
@@ -578,9 +685,10 @@ var AboutModule = (function () {
 AboutModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_1__about_component__["a" /* AboutComponent */]
+            __WEBPACK_IMPORTED_MODULE_2__about_component__["a" /* AboutComponent */]
         ],
-        exports: [__WEBPACK_IMPORTED_MODULE_1__about_component__["a" /* AboutComponent */]]
+        imports: [__WEBPACK_IMPORTED_MODULE_1__footer_index__["a" /* FooterModule */]],
+        exports: [__WEBPACK_IMPORTED_MODULE_2__about_component__["a" /* AboutComponent */]]
     })
 ], AboutModule);
 
@@ -637,7 +745,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/checkbox-list-demo/checkbox-list-demo.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/modal-bg.jpg')\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n        <div class=\"site-heading\">\n          <h1> Check Box List </h1>\n          <hr class=\"small\">\n          <span class=\"subheading\">Check box list can be generated dynamically</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-12\">\n      <h3 class=\"example\">HTML Snippet</h3>\n      <pre>\n        &lt;app-checkbox-list \n        <strong class=\"highlight\">[checkBoxList]=\"INPUT_DATA\"</strong> \n        <strong class=\"highlight\">(selectedCheckBoxes)=\"YOUR_METHOD_NAME($event)\"</strong>&gt; \n        &lt;/app-checkbox-list&gt;       \n      </pre>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-sm-12\">\n      <div class=\"col-sm-4\">\n        <h3 class=\"example\">Live JSON</h3>\n        <textarea id=\"chkInputTextArea\" [(ngModel)]=\"checkBoxListValues\" style=\"width:100%\" rows=\"15\"></textarea>\n      </div>\n      <div class=\"col-sm-4\">\n        <div class=\"col-sm-12\">\n          <h3 class=\"example\">Output</h3>\n          <app-checkbox-list [checkBoxList]=\"checkboxes\" (selectedCheckBoxes)=\"selectedCheckBox($event)\"> </app-checkbox-list>\n        </div>\n      </div>\n      <div class=\"col-sm-4\">\n        <h3 class=\"example\">Selected Items</h3>\n        <textarea class=\"output-text-area\" id=\"chkOutputTextArea\" disabled [ngModel]=\"getSelectedItems()\" style=\"width:100%\" rows=\"8\"></textarea>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/modal-bg.jpg')\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n        <div class=\"site-heading\">\n          <h1> Check Box List </h1>\n          <hr class=\"small\">\n          <span class=\"subheading\">Check box list can be generated dynamically</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-12\">\n      <h3 class=\"example\">HTML Snippet</h3>\n      <pre>\n        &lt;app-checkbox-list \n        <strong class=\"highlight\">[checkBoxList]=\"INPUT_DATA\"</strong> \n        <strong class=\"highlight\">(selectedCheckBoxes)=\"YOUR_METHOD_NAME($event)\"</strong>&gt; \n        &lt;/app-checkbox-list&gt;       \n      </pre>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-sm-12\">\n      <div class=\"col-sm-4\">\n        <h3 class=\"example\">Live JSON</h3>\n        <textarea id=\"chkInputTextArea\" [(ngModel)]=\"checkBoxListValues\" style=\"width:100%\" rows=\"15\"></textarea>\n      </div>\n      <div class=\"col-sm-4\">\n        <div class=\"col-sm-12\">\n          <h3 class=\"example\">Output</h3>\n          <app-checkbox-list [checkBoxList]=\"checkboxes\" (selectedCheckBoxes)=\"selectedCheckBox($event)\"> </app-checkbox-list>\n        </div>\n      </div>\n      <div class=\"col-sm-4\">\n        <h3 class=\"example\">Selected Items</h3>\n        <textarea class=\"output-text-area\" id=\"chkOutputTextArea\" disabled [ngModel]=\"getSelectedItems()\" style=\"width:100%\" rows=\"8\"></textarea>\n      </div>\n    </div>\n  </div>\n</div>\n<app-footer></app-footer>"
 
 /***/ }),
 
@@ -730,12 +838,14 @@ CheckboxListDemoComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__checkbox_list_demo_component__ = __webpack_require__("../../../../../src/app/pages/checkbox-list-demo/checkbox-list-demo.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_index__ = __webpack_require__("../../../../../src/app/modules/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__footer_index__ = __webpack_require__("../../../../../src/app/footer/index.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -749,7 +859,7 @@ var CheckboxListDemoModule = (function () {
 CheckboxListDemoModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
         declarations: [__WEBPACK_IMPORTED_MODULE_3__checkbox_list_demo_component__["a" /* CheckboxListDemoComponent */]],
-        imports: [__WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */], __WEBPACK_IMPORTED_MODULE_4__modules_index__["a" /* CheckBoxListModule */]],
+        imports: [__WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */], __WEBPACK_IMPORTED_MODULE_4__modules_index__["a" /* CheckBoxListModule */], __WEBPACK_IMPORTED_MODULE_5__footer_index__["a" /* FooterModule */]],
         exports: [__WEBPACK_IMPORTED_MODULE_3__checkbox_list_demo_component__["a" /* CheckboxListDemoComponent */]]
     })
 ], CheckboxListDemoModule);
@@ -807,7 +917,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/focus-demo/focus-demo.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/focus-setter-bg.jpg')\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n        <div class=\"site-heading\">\n          <h1> Focus Setter Module</h1>\n          <hr class=\"small\">\n          <span class=\"subheading\">With this module, you will be able to set focus to your target element</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h2 class=\"example\">Example</h2>\n      <div class=\"post-preview\">\n        <button class=\"btn btn-success\" set-focus-to targetElement=\"txtEnterFirstName\"> Focus on Enter first name text box </button>\n        <button class=\"btn btn-success\" set-focus-to targetElement=\"txtEnterLastName\"> Focus on Enter last text box </button>\n        <button class=\"btn btn-success\" set-focus-to targetElement=\"chkToggle\"> Focus on Checkbox </button>\n      </div>\n      <hr>\n      <div class=\"post-preview\">\n        <form>\n          <div class=\"form-group\">\n            <label for=\"formGroupExampleInput\">Enter first name</label>\n            <input type=\"text\" class=\"form-control\" id=\"txtEnterFirstName\" placeholder=\"Example input\">\n          </div>\n          <div class=\"form-group\">\n            <label for=\"formGroupExampleInput2\">Enter last name</label>\n            <input type=\"text\" class=\"form-control\" id=\"txtEnterLastName\" placeholder=\"Another input\">\n          </div>\n          <div class=\"form-check\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" id=\"chkToggle\" type=\"checkbox\" value=\"\">\n              Option one is this and that—be sure to include why it's great\n            </label>\n          </div>\n        </form>\n      </div>\n      <hr>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h2 class=\"example\">Code Snippet</h2>\n      <hr>\n      <div class=\"post-preview\">\n        Coming Soon...\n      </div>\n      <hr>\n    </div>\n  </div>\n</div>"
+module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/focus-setter-bg.jpg')\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n        <div class=\"site-heading\">\n          <h1> Focus Setter Module</h1>\n          <hr class=\"small\">\n          <span class=\"subheading\">With this module, you will be able to set focus to your target element</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h2 class=\"example\">Example</h2>\n      <div class=\"post-preview\">\n        <button class=\"btn btn-success\" set-focus-to targetElement=\"txtEnterFirstName\"> Focus on Enter first name text box </button>\n        <button class=\"btn btn-success\" set-focus-to targetElement=\"txtEnterLastName\"> Focus on Enter last text box </button>\n        <button class=\"btn btn-success\" set-focus-to targetElement=\"chkToggle\"> Focus on Checkbox </button>\n      </div>\n      <hr>\n      <div class=\"post-preview\">\n        <form>\n          <div class=\"form-group\">\n            <label for=\"formGroupExampleInput\">Enter first name</label>\n            <input type=\"text\" class=\"form-control\" id=\"txtEnterFirstName\" placeholder=\"Example input\">\n          </div>\n          <div class=\"form-group\">\n            <label for=\"formGroupExampleInput2\">Enter last name</label>\n            <input type=\"text\" class=\"form-control\" id=\"txtEnterLastName\" placeholder=\"Another input\">\n          </div>\n          <div class=\"form-check\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" id=\"chkToggle\" type=\"checkbox\" value=\"\">\n              Option one is this and that—be sure to include why it's great\n            </label>\n          </div>\n        </form>\n      </div>\n      <hr>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h2 class=\"example\">Code Snippet</h2>\n      <hr>\n      <div class=\"post-preview\">\n        Coming Soon...\n      </div>\n      <hr>\n    </div>\n  </div>\n</div>\n<app-footer></app-footer>"
 
 /***/ }),
 
@@ -854,13 +964,15 @@ FocusDemoComponent = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FocusDemoModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_index__ = __webpack_require__("../../../../../src/app/modules/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__focus_demo_component__ = __webpack_require__("../../../../../src/app/pages/focus-demo/focus-demo.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__footer_index__ = __webpack_require__("../../../../../src/app/footer/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__focus_demo_component__ = __webpack_require__("../../../../../src/app/pages/focus-demo/focus-demo.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -871,9 +983,9 @@ var FocusDemoModule = (function () {
 }());
 FocusDemoModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
-        declarations: [__WEBPACK_IMPORTED_MODULE_2__focus_demo_component__["a" /* FocusDemoComponent */]],
-        imports: [__WEBPACK_IMPORTED_MODULE_1__modules_index__["b" /* FocusSetterModule */]],
-        exports: [__WEBPACK_IMPORTED_MODULE_2__focus_demo_component__["a" /* FocusDemoComponent */]]
+        declarations: [__WEBPACK_IMPORTED_MODULE_3__focus_demo_component__["a" /* FocusDemoComponent */]],
+        imports: [__WEBPACK_IMPORTED_MODULE_1__modules_index__["b" /* FocusSetterModule */], __WEBPACK_IMPORTED_MODULE_2__footer_index__["a" /* FooterModule */]],
+        exports: [__WEBPACK_IMPORTED_MODULE_3__focus_demo_component__["a" /* FocusDemoComponent */]]
     })
 ], FocusDemoModule);
 
@@ -930,7 +1042,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/graphs-demo/graphs-demo.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/intro-bg.jpg')\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n        <div class=\"site-heading\">\n          <h1> Reactive Graphs</h1>\n          <hr class=\"small\">\n          <span class=\"subheading\">Responsive and reactive graphs</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h2>In the below graph examples, click on the graph legend or hover on the graph to get amazing user experience </h2>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h3 class=\"graph-name\">Grouped bar chart</h3>\n      <canvas id=\"bar-chart-grouped\" width=\"800\" height=\"450\"></canvas>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h3 class=\"graph-name\">Doughnut chart</h3>\n      <canvas id=\"doughnut-chart\" width=\"800\" height=\"450\"></canvas>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h3 class=\"graph-name\">Polar area chart</h3>\n      <canvas id=\"polar-chart\" width=\"800\" height=\"450\"></canvas>\n    </div>\n  </div>  \n\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h3 class=\"graph-name\">Line chart</h3>\n      <canvas id=\"line-chart\" width=\"800\" height=\"450\"></canvas>\n    </div>\n  </div>\n\n</div>"
+module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/intro-bg.jpg')\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n        <div class=\"site-heading\">\n          <h1> Reactive Graphs</h1>\n          <hr class=\"small\">\n          <span class=\"subheading\">Responsive and reactive graphs</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h2>In the below graph examples, click on the graph legend or hover on the graph to get amazing user experience </h2>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h3 class=\"graph-name\">Grouped bar chart</h3>\n      <canvas id=\"bar-chart-grouped\" width=\"800\" height=\"450\"></canvas>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h3 class=\"graph-name\">Doughnut chart</h3>\n      <canvas id=\"doughnut-chart\" width=\"800\" height=\"450\"></canvas>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h3 class=\"graph-name\">Polar area chart</h3>\n      <canvas id=\"polar-chart\" width=\"800\" height=\"450\"></canvas>\n    </div>\n  </div>  \n\n  <div class=\"row\">\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n      <h3 class=\"graph-name\">Line chart</h3>\n      <canvas id=\"line-chart\" width=\"800\" height=\"450\"></canvas>\n    </div>\n  </div>\n\n</div>\n<app-footer></app-footer>"
 
 /***/ }),
 
@@ -1092,13 +1204,15 @@ GraphsDemoComponent = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GraphsDemoModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__graphs_demo_component__ = __webpack_require__("../../../../../src/app/pages/graphs-demo/graphs-demo.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer_index__ = __webpack_require__("../../../../../src/app/footer/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__graphs_demo_component__ = __webpack_require__("../../../../../src/app/pages/graphs-demo/graphs-demo.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 var GraphsDemoModule = (function () {
@@ -1109,9 +1223,10 @@ var GraphsDemoModule = (function () {
 GraphsDemoModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_1__graphs_demo_component__["a" /* GraphsDemoComponent */]
+            __WEBPACK_IMPORTED_MODULE_2__graphs_demo_component__["a" /* GraphsDemoComponent */]
         ],
-        exports: [__WEBPACK_IMPORTED_MODULE_1__graphs_demo_component__["a" /* GraphsDemoComponent */]]
+        imports: [__WEBPACK_IMPORTED_MODULE_1__footer_index__["a" /* FooterModule */]],
+        exports: [__WEBPACK_IMPORTED_MODULE_2__graphs_demo_component__["a" /* GraphsDemoComponent */]]
     })
 ], GraphsDemoModule);
 
@@ -1168,7 +1283,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/intro-bg.jpg')\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n        <div class=\"site-heading\">\r\n          <h1> Explore Reusable Angular 2 Modules</h1>\r\n          <hr class=\"small\">\r\n          <span class=\"subheading\">A collection of variety of angular 2 modules, directives etc which are ready to use</span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</header>\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n      <div class=\"post-preview\">\r\n        <a href=\"https://toddmotto.com/transclusion-in-angular-2-with-ng-content\">\r\n          <h2 class=\"post-title\">\r\n            Angular Content Projection\r\n          </h2>\r\n        </a>\r\n        <h3 class=\"post-subtitle\">\r\n          Projection is a very important concept in Angular. It enables developers to build reusable components and make applications\r\n          more scalable and flexible\r\n        </h3>\r\n\r\n        <p class=\"post-meta\">Posted by <a href=\"https://twitter.com/intent/follow?original_referer=https%3A%2F%2Ftoddmotto.com%2Ftransclusion-in-angular-2-with-ng-content&ref_src=twsrc%5Etfw&region=follow_link&screen_name=toddmotto&tw_p=followbutton\">toddmotto</a>          on Mar 22, 2016</p>\r\n      </div>\r\n      <hr>\r\n      <div class=\"post-preview\">\r\n        <a href=\"https://johnpapa.net/introducing-angular-modules-feature-modules-2/\">\r\n          <h2 class=\"post-title\">\r\n           Angular Modules\r\n          </h2>\r\n        </a>\r\n        <h3 class=\"post-subtitle\">\r\n          NgModules help organize an application into cohesive blocks of functionality.\r\n        </h3>\r\n\r\n        <p class=\"post-meta\">Posted by <a href=\"https://twitter.com/john_papa\">john papa</a> on 17 SEPTEMBER 2016</p>\r\n      </div>\r\n      <hr>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/intro-bg.jpg')\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n        <div class=\"site-heading\">\r\n          <h1> Explore Reusable Angular 2 Modules</h1>\r\n          <hr class=\"small\">\r\n          <span class=\"subheading\">A collection of variety of angular 2 modules, directives etc which are ready to use</span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</header>\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n      <div class=\"post-preview\">\r\n        <a href=\"https://toddmotto.com/transclusion-in-angular-2-with-ng-content\">\r\n          <h2 class=\"post-title\">\r\n            Angular Content Projection\r\n          </h2>\r\n        </a>\r\n        <h3 class=\"post-subtitle\">\r\n          Projection is a very important concept in Angular. It enables developers to build reusable components and make applications\r\n          more scalable and flexible\r\n        </h3>\r\n\r\n        <p class=\"post-meta\">Posted by <a href=\"https://twitter.com/intent/follow?original_referer=https%3A%2F%2Ftoddmotto.com%2Ftransclusion-in-angular-2-with-ng-content&ref_src=twsrc%5Etfw&region=follow_link&screen_name=toddmotto&tw_p=followbutton\">toddmotto</a>          on Mar 22, 2016</p>\r\n      </div>\r\n      <hr>\r\n      <div class=\"post-preview\">\r\n        <a href=\"https://johnpapa.net/introducing-angular-modules-feature-modules-2/\">\r\n          <h2 class=\"post-title\">\r\n           Angular Modules\r\n          </h2>\r\n        </a>\r\n        <h3 class=\"post-subtitle\">\r\n          NgModules help organize an application into cohesive blocks of functionality.\r\n        </h3>\r\n\r\n        <p class=\"post-meta\">Posted by <a href=\"https://twitter.com/john_papa\">john papa</a> on 17 SEPTEMBER 2016</p>\r\n      </div>\r\n      <hr>\r\n    </div>\r\n  </div>\r\n</div>\r\n<app-footer></app-footer>"
 
 /***/ }),
 
@@ -1214,13 +1329,15 @@ HomeComponent = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_component__ = __webpack_require__("../../../../../src/app/pages/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer_index__ = __webpack_require__("../../../../../src/app/footer/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_component__ = __webpack_require__("../../../../../src/app/pages/home/home.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 var HomeModule = (function () {
@@ -1231,9 +1348,10 @@ var HomeModule = (function () {
 HomeModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_1__home_component__["a" /* HomeComponent */]
+            __WEBPACK_IMPORTED_MODULE_2__home_component__["a" /* HomeComponent */]
         ],
-        exports: [__WEBPACK_IMPORTED_MODULE_1__home_component__["a" /* HomeComponent */]]
+        imports: [__WEBPACK_IMPORTED_MODULE_1__footer_index__["a" /* FooterModule */]],
+        exports: [__WEBPACK_IMPORTED_MODULE_2__home_component__["a" /* HomeComponent */]]
     })
 ], HomeModule);
 

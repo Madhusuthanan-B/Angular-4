@@ -1,9 +1,14 @@
 body{
     background-color: #fff;
-    color: #333;
-    font-family: Lora,'Times New Roman',serif;
     font-size: 20px;
     -webkit-tap-highlight-color: #0085A1;
+    color: #565656;
+    width: 100%;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: 'open_sanslight';
+    font-weight: 300;
 }
 
 #scrollTop {
@@ -93,4 +98,46 @@ textarea {
 .output-text-area {
     background: #222;
     color:#42c88a;
+}
+.footer{
+    background: #333333;
+    z-index: 100;
+    position: relative;
+}
+.footer p {
+    padding: 20px 0px;
+    color: #fff;
+}
+.footer p i {   
+    font-size: 16px;
+    padding: 0px 10px;
+}
+.footer p a {
+    color: #70c92f;
+    font-family: 'open_sansbold';
+}
+.fa-heart{
+    color: red;
+}
+p {
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+}
+#follow-button {
+    background: #0c7abf;
+    position: relative;
+    height: 20px;
+    box-sizing: border-box;
+    padding: 1px 8px 1px 6px;
+    background-color: #0c7abf; 
+    color: #fff;
+    border-radius: 3px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.fa-twitter {
+    font-size: 20px;
+    background: #0c7abf;
+     padding: 0px 10px;
+     color: #fff;
 }
