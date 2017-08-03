@@ -14,6 +14,17 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
+      <h3 class="example">HTML Snippet</h3>
+      <pre>
+        &lt;app-checkbox-list 
+        <strong class="highlight">[checkBoxList]="INPUT_DATA"</strong> 
+        <strong class="highlight">(selectedCheckBoxes)="YOUR_METHOD_NAME($event)"</strong>&gt; 
+        &lt;/app-checkbox-list&gt;       
+      </pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
       <div class="col-sm-4">
         <h3 class="example">Live JSON</h3>
         <textarea id="chkInputTextArea" [(ngModel)]="checkBoxListValues" style="width:100%" rows="15"></textarea>
