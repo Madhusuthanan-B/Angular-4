@@ -167,7 +167,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/modules/checkbox-list/checkbox-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ng-container *ngIf=\"enableCheckBoxList\">\n  <div class=\"form-check\" [ngClass]=\"{'disabled': checkbox.disabled}\" *ngFor=\"let checkbox of checkBoxList.checkboxes\">\n    <label class=\"form-check-label\">\n    <input id=\"{{checkbox.id}}\" class=\"form-check-input\" type=\"checkbox\" name=\"{{checkbox.name}}\" \n      value=\"{{checkbox.value}}\" [disabled]=\"checkbox.disabled\" [checked]=\"checkbox.checked\">\n      {{checkbox.label}}\n    </label>\n  </div>\n</ng-container>"
+module.exports = "<ng-container *ngIf=\"enableCheckBoxList\">\n  <div class=\"form-check\" [ngClass]=\"{'disabled': checkbox.disabled}\" *ngFor=\"let checkbox of checkBoxList.checkboxes\">\n    <label class=\"form-check-label\">\n    <input id=\"{{checkbox.id}}\" class=\"form-check-input\" type=\"checkbox\" name=\"{{checkbox.name}}\" \n      value=\"{{checkbox.value}}\" [disabled]=\"checkbox.disabled\" [checked]=\"checkbox.checked\"\n      (change)=\"emitChange($event, checkbox)\">\n      {{checkbox.label}}\n    </label>\n  </div>\n</ng-container>"
 
 /***/ }),
 
@@ -189,12 +189,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var CheckboxListComponent = (function () {
     function CheckboxListComponent() {
+        this.selectedCheckBoxes = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
         this.enableCheckBoxList = false;
+        this.selectedItems = [];
     }
     CheckboxListComponent.prototype.ngOnInit = function () {
         if (!!this.checkBoxList) {
             this.enableCheckBoxList = true;
         }
+    };
+    CheckboxListComponent.prototype.emitChange = function (event, item) {
+        item.checked = event.target.checked;
+        this.selectedItems = this.checkBoxList.checkboxes.filter(function (chkbox) { return chkbox.checked === true; });
+        this.selectedCheckBoxes.emit(this.selectedItems);
     };
     return CheckboxListComponent;
 }());
@@ -202,6 +209,10 @@ __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
     __metadata("design:type", Object)
 ], CheckboxListComponent.prototype, "checkBoxList", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Output */])(),
+    __metadata("design:type", Object)
+], CheckboxListComponent.prototype, "selectedCheckBoxes", void 0);
 CheckboxListComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-checkbox-list',
@@ -626,7 +637,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/checkbox-list-demo/checkbox-list-demo.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/modal-bg.jpg')\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n        <div class=\"site-heading\">\n          <h1> Check Box List </h1>\n          <hr class=\"small\">\n          <span class=\"subheading\">Check box list can be generated dynamically</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-12\">\n      <div class=\"col-sm-6\">\n        <h3 class=\"example\">Live JSON</h3>\n        <textarea id=\"chkInputTextArea\" [(ngModel)]=\"checkBoxListValues\" style=\"width:100%\" rows=\"15\"></textarea>\n      </div>\n      <div class=\"col-sm-6\">\n          <h3 class=\"example\">Output</h3>\n        <app-checkbox-list [checkBoxList]=\"checkboxes\"> </app-checkbox-list>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/modal-bg.jpg')\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n        <div class=\"site-heading\">\n          <h1> Check Box List </h1>\n          <hr class=\"small\">\n          <span class=\"subheading\">Check box list can be generated dynamically</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-12\">\n      <div class=\"col-sm-6\">\n        <h3 class=\"example\">Live JSON</h3>\n        <textarea id=\"chkInputTextArea\" [(ngModel)]=\"checkBoxListValues\" style=\"width:100%\" rows=\"15\"></textarea>\n      </div>\n      <div class=\"col-sm-6\">\n          <h3 class=\"example\">Output</h3>\n        <app-checkbox-list [checkBoxList]=\"checkboxes\" (selectedCheckBoxes)=\"selectedCheckBox($event)\"> </app-checkbox-list>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -650,14 +661,21 @@ var CheckboxListDemoComponent = (function () {
     function CheckboxListDemoComponent() {
         this.checkboxData = {
             checkboxes: [
-                { id: 'chkMobileNotification', name: 'Option1', value: 'Option 1', label: 'Enable Mobile Notifications' },
+                {
+                    id: 'chkMobileNotification', name: 'Option1', value: 'Option 1',
+                    label: 'Enable Mobile Notifications', checked: false
+                },
+                {
+                    id: 'chkWhatsAppNotification', name: 'Option1', value: 'Option 1',
+                    label: 'Enable WhatsApp Notifications', checked: false
+                },
                 {
                     id: 'chkWebNotification', name: 'Option1', value: 'Enable Web Notifications',
                     label: 'Enable Web Notifications', checked: true
                 },
                 {
                     id: 'chkFbNotification', name: 'Option1', value: 'Enable Facebook Notification',
-                    label: 'Enable Facebook Notification', disabled: true
+                    label: 'Enable Facebook Notification', disabled: true, checked: false
                 }
             ]
         };
@@ -680,6 +698,9 @@ var CheckboxListDemoComponent = (function () {
         enumerable: true,
         configurable: true
     });
+    CheckboxListDemoComponent.prototype.selectedCheckBox = function (changes) {
+        console.log(changes);
+    };
     return CheckboxListDemoComponent;
 }());
 CheckboxListDemoComponent = __decorate([

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { } from './checkbox-list.component.d';
 
 @Component({
@@ -9,7 +9,9 @@ import { } from './checkbox-list.component.d';
 export class CheckboxListComponent implements OnInit {
 
   @Input() checkBoxList: CheckBoxList;
+  @Output() selectedCheckBoxes = new EventEmitter<Array<CheckBox>>();
   enableCheckBoxList: boolean = false;
+  private selectedItems: Array<CheckBox> = [];
 
   constructor() { }
 
@@ -17,6 +19,12 @@ export class CheckboxListComponent implements OnInit {
     if (!!this.checkBoxList) {
       this.enableCheckBoxList = true;
     }
+  }
+
+  emitChange(event: any, item: CheckBox) {
+    item.checked = event.target.checked;
+    this.selectedItems = this.checkBoxList.checkboxes.filter(chkbox => chkbox.checked === true);
+    this.selectedCheckBoxes.emit(this.selectedItems);
   }
 
 }

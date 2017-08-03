@@ -18,7 +18,9 @@ describe('CheckboxListComponent: ', () => {
     component = fixture.componentInstance;
     component.checkBoxList = {
       checkboxes: [
-        { id: 'chkOption1', name: 'Option1', value: 'Option 1', label: 'Option 1' }
+        { id: 'chkWeb', name: 'Web', value: 'Web', label: 'Enable Web', checked: true },
+        { id: 'chkAndroid', name: 'Android', value: 'Android', label: 'Enable Android', checked: false },
+        { id: 'chkIos', name: 'Ios', value: 'Ios', label: 'Enable Ios', checked: false }
       ]
     };
     fixture.detectChanges();
@@ -28,6 +30,21 @@ describe('CheckboxListComponent: ', () => {
 
     it('should activate checkbox list only if input data is present ', () => {
       expect(component.enableCheckBoxList).toBeTruthy();
+    });
+
+  });
+
+  describe('When check / uncheck operation is performed, then emitChange()', () => {
+
+    it('should emit only the selected checkboxes from the checkbox list component ', () => {
+      const fakeEvent = { target: { checked: true } };
+      const selectedCheckboxes = [
+        { id: 'chkWeb', name: 'Web', value: 'Web', label: 'Enable Web', checked: true },
+        { id: 'chkIos', name: 'Ios', value: 'Ios', label: 'Enable Ios', checked: true }
+      ];
+      spyOn(component.selectedCheckBoxes, 'emit');
+      component.emitChange(fakeEvent, component.checkBoxList.checkboxes[2]);
+      expect(component.selectedCheckBoxes.emit).toHaveBeenCalledWith(selectedCheckboxes);
     });
 
   });

@@ -20,7 +20,7 @@
       </div>
       <div class="col-sm-6">
           <h3 class="example">Output</h3>
-        <app-checkbox-list [checkBoxList]="checkboxes"> </app-checkbox-list>
+        <app-checkbox-list [checkBoxList]="checkboxes" (selectedCheckBoxes)="selectedCheckBox($event)"> </app-checkbox-list>
       </div>
     </div>
   </div>

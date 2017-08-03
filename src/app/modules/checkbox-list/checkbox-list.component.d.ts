@@ -3,7 +3,7 @@ interface CheckBoxList {
 }
 
 interface CheckBox {
-    checked?: boolean;
+    checked: boolean;
     disabled?: boolean;
     id: string;
     label: string;

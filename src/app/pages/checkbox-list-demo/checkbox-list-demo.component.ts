@@ -8,14 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class CheckboxListDemoComponent implements OnInit {
   private checkboxData: CheckBoxList = {
     checkboxes: [
-      { id: 'chkMobileNotification', name: 'Option1', value: 'Option 1', label: 'Enable Mobile Notifications' },
+      {
+        id: 'chkMobileNotification', name: 'Option1', value: 'Option 1',
+        label: 'Enable Mobile Notifications', checked: false
+      },
+      {
+        id: 'chkWhatsAppNotification', name: 'Option1', value: 'Option 1',
+        label: 'Enable WhatsApp Notifications', checked: false
+      },
       {
         id: 'chkWebNotification', name: 'Option1', value: 'Enable Web Notifications',
         label: 'Enable Web Notifications', checked: true
       },
       {
         id: 'chkFbNotification', name: 'Option1', value: 'Enable Facebook Notification',
-        label: 'Enable Facebook Notification', disabled: true
+        label: 'Enable Facebook Notification', disabled: true, checked: false
       }
     ]
   };
@@ -36,7 +43,10 @@ export class CheckboxListDemoComponent implements OnInit {
     } catch (error) {
       console.log('Error while typing JSON');
     }
+  }
 
+  selectedCheckBox(changes: any) {
+    console.log(changes);
   }
 
 }
