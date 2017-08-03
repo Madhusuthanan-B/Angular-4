@@ -25,7 +25,7 @@ jobs:
         
       # run tests!
       - run: npm test
-      - run: npm build --env=prod --base-href=https://Madhusuthanan-B.github.io/Angular-4/
+      - run: npm build
 
       - store_artifacts: 
           path: ~/repo/karma_html/report-summary-filename
