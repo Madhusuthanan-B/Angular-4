@@ -27,6 +27,7 @@ export class CheckboxListDemoComponent implements OnInit {
     ]
   };
   private checkboxes: any = this.checkboxData;
+  private selectedCheckboxes: any;
 
   constructor() { }
 
@@ -46,7 +47,12 @@ export class CheckboxListDemoComponent implements OnInit {
   }
 
   selectedCheckBox(changes: any) {
-    console.log(changes);
+    this.selectedCheckboxes = undefined;
+    this.selectedCheckboxes = changes;
+  }
+
+  getSelectedItems() {
+    return JSON.stringify(this.selectedCheckboxes, null, 2);
   }
 
 }

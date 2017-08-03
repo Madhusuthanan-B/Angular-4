@@ -89,3 +89,8 @@ textarea {
     background: black;
     color: #3CBF3B;
 }
+
+.output-text-area {
+    background: #222;
+    color:#42c88a;
+}

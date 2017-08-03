@@ -637,7 +637,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/checkbox-list-demo/checkbox-list-demo.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/modal-bg.jpg')\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n        <div class=\"site-heading\">\n          <h1> Check Box List </h1>\n          <hr class=\"small\">\n          <span class=\"subheading\">Check box list can be generated dynamically</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-12\">\n      <div class=\"col-sm-6\">\n        <h3 class=\"example\">Live JSON</h3>\n        <textarea id=\"chkInputTextArea\" [(ngModel)]=\"checkBoxListValues\" style=\"width:100%\" rows=\"15\"></textarea>\n      </div>\n      <div class=\"col-sm-6\">\n          <h3 class=\"example\">Output</h3>\n        <app-checkbox-list [checkBoxList]=\"checkboxes\" (selectedCheckBoxes)=\"selectedCheckBox($event)\"> </app-checkbox-list>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/modal-bg.jpg')\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\n        <div class=\"site-heading\">\n          <h1> Check Box List </h1>\n          <hr class=\"small\">\n          <span class=\"subheading\">Check box list can be generated dynamically</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</header>\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-12\">\n      <div class=\"col-sm-4\">\n        <h3 class=\"example\">Live JSON</h3>\n        <textarea id=\"chkInputTextArea\" [(ngModel)]=\"checkBoxListValues\" style=\"width:100%\" rows=\"15\"></textarea>\n      </div>\n      <div class=\"col-sm-4\">\n        <div class=\"col-sm-12\">\n          <h3 class=\"example\">Output</h3>\n          <app-checkbox-list [checkBoxList]=\"checkboxes\" (selectedCheckBoxes)=\"selectedCheckBox($event)\"> </app-checkbox-list>\n        </div>\n      </div>\n      <div class=\"col-sm-4\">\n        <h3 class=\"example\">Selected Items</h3>\n        <textarea class=\"output-text-area\" id=\"chkOutputTextArea\" disabled [ngModel]=\"getSelectedItems()\" style=\"width:100%\" rows=\"8\"></textarea>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -699,7 +699,11 @@ var CheckboxListDemoComponent = (function () {
         configurable: true
     });
     CheckboxListDemoComponent.prototype.selectedCheckBox = function (changes) {
-        console.log(changes);
+        this.selectedCheckboxes = undefined;
+        this.selectedCheckboxes = changes;
+    };
+    CheckboxListDemoComponent.prototype.getSelectedItems = function () {
+        return JSON.stringify(this.selectedCheckboxes, null, 2);
     };
     return CheckboxListDemoComponent;
 }());

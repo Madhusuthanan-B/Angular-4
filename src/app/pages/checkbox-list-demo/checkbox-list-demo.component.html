@@ -14,13 +14,19 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <div class="col-sm-6">
+      <div class="col-sm-4">
         <h3 class="example">Live JSON</h3>
         <textarea id="chkInputTextArea" [(ngModel)]="checkBoxListValues" style="width:100%" rows="15"></textarea>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-4">
+        <div class="col-sm-12">
           <h3 class="example">Output</h3>
-        <app-checkbox-list [checkBoxList]="checkboxes" (selectedCheckBoxes)="selectedCheckBox($event)"> </app-checkbox-list>
+          <app-checkbox-list [checkBoxList]="checkboxes" (selectedCheckBoxes)="selectedCheckBox($event)"> </app-checkbox-list>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <h3 class="example">Selected Items</h3>
+        <textarea class="output-text-area" id="chkOutputTextArea" disabled [ngModel]="getSelectedItems()" style="width:100%" rows="8"></textarea>
       </div>
     </div>
   </div>
