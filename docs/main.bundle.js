@@ -163,7 +163,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/footer/footer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<footer class=\"footer\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div>\n        <p>An angular 4 project made with<i class=\"fa fa-heart\"></i> by <a target=\"_blank\" href=\"https://www.gitshowcase.com/madhusuthanan-b\">Madhu</a>\n          <a id=\"follow-button\" class=\"btn\" title=\"Follow Madhu (@madhuddevloper) on Twitter\" target=\"_blank\" href=\"https://twitter.com/madhuddeveloper\">\n            <i class=\"fa fa-twitter\"></i>\n            <span  id=\"l\">Follow <b>@madhuddevloper</b></span>\n          </a>\n        </p>\n      </div>\n    </div>\n  </div>\n</footer>"
+module.exports = "<footer class=\"footer\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"text-center\">\n        <p>An angular 4 project made with<i class=\"fa fa-heart\"></i> by <a target=\"_blank\" href=\"https://www.gitshowcase.com/madhusuthanan-b\">Madhu</a>\n          <a id=\"follow-button\" class=\"btn\" title=\"Follow Madhu (@madhuddevloper) on Twitter\" target=\"_blank\" href=\"https://twitter.com/madhuddeveloper\">\n            <i class=\"fa fa-twitter\"></i>\n            <span  id=\"l\">Follow <b>@madhuddevloper</b></span>\n          </a>\n        </p>\n      </div>\n    </div>\n  </div>\n</footer>"
 
 /***/ }),
 

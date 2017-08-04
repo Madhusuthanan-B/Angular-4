@@ -108,6 +108,9 @@ textarea {
     color: #70c92f;
     font-family: 'open_sansbold';
 }
+.text-center {
+    text-align: center;
+}
 .fa-heart{
     color: red;
 }
