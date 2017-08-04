@@ -34,7 +34,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar> </app-navbar>\r\n<div>\r\n\t<router-outlet></router-outlet>\r\n</div>\r\n<!-- <button class=\"btn btn-default\" (click)=\"scrollTop()\" id=\"scrollTop\" title=\"Go to top\">Top</button> -->"
+module.exports = "<app-navbar> </app-navbar>\r\n<div>\r\n\t<router-outlet></router-outlet>\r\n</div>\r\n<div class=\"scrollup\" id=\"scrollTop\" style=\"display: block;\">\r\n\t<a href=\"#\"><i class=\"fa fa-chevron-up\"></i></a>\r\n</div>"
 
 /***/ }),
 
@@ -53,11 +53,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'app';
     }
-    AppComponent.prototype.scrollTop = function () {
-        window.scroll(0, 0);
-    };
     return AppComponent;
 }());
 AppComponent = __decorate([
