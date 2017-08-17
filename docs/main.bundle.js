@@ -1279,7 +1279,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/intro-bg.jpg')\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n        <div class=\"site-heading\">\r\n          <h1> Explore Reusable Angular 2 Modules</h1>\r\n          <hr class=\"small\">\r\n          <span class=\"subheading\">A collection of variety of angular 2 modules, directives etc which are ready to use</span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</header>\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n       <div class=\"post-preview\">\r\n        <a href=\"http://blog.angular-university.io/angular-2-universal-meet-the-internet-of-the-future-seo-friendly-single-page-web-apps/\">\r\n          <h2 class=\"post-title\">\r\n            Angular Universal In Practice - How to build SEO Friendly Single Page Apps with Angular\r\n          </h2>\r\n        </a>\r\n        <h3 class=\"post-subtitle\">\r\n          There has been a lot of talk about Angular in the last few months and how to use it to build client apps, but one of its most important innovations is actually happening on the server.\r\n        </h3>\r\n        <p class=\"post-meta\">Posted by <a href=\"https://angular-university.io/\">angular university</a> on 26 May 2016</p>\r\n      </div>\r\n      <hr>\r\n      <div class=\"post-preview\">\r\n        <a href=\"https://toddmotto.com/transclusion-in-angular-2-with-ng-content\">\r\n          <h2 class=\"post-title\">\r\n            Angular Content Projection\r\n          </h2>\r\n        </a>\r\n        <h3 class=\"post-subtitle\">\r\n          Projection is a very important concept in Angular. It enables developers to build reusable components and make applications\r\n          more scalable and flexible\r\n        </h3>\r\n\r\n        <p class=\"post-meta\">Posted by <a href=\"https://twitter.com/intent/follow?original_referer=https%3A%2F%2Ftoddmotto.com%2Ftransclusion-in-angular-2-with-ng-content&ref_src=twsrc%5Etfw&region=follow_link&screen_name=toddmotto&tw_p=followbutton\">toddmotto</a>          on Mar 22, 2016</p>\r\n      </div>\r\n      <hr>\r\n      <div class=\"post-preview\">\r\n        <a href=\"https://johnpapa.net/introducing-angular-modules-feature-modules-2/\">\r\n          <h2 class=\"post-title\">\r\n            Angular Modules\r\n          </h2>\r\n        </a>\r\n        <h3 class=\"post-subtitle\">\r\n          NgModules help organize an application into cohesive blocks of functionality.\r\n        </h3>\r\n\r\n        <p class=\"post-meta\">Posted by <a href=\"https://twitter.com/john_papa\">john papa</a> on 17 SEPTEMBER 2016</p>\r\n      </div>\r\n      <hr>\r\n    </div>\r\n  </div>\r\n</div>\r\n<app-footer></app-footer>"
+module.exports = "<header class=\"intro-header\" style=\"background-image: url('assets/images/intro-bg.jpg')\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n        <div class=\"site-heading\">\r\n          <h1> Explore Reusable Angular 2 Modules</h1>\r\n          <hr class=\"small\">\r\n          <span class=\"subheading\">A collection of variety of angular 2 modules, directives etc which are ready to use</span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</header>\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">\r\n       <div *ngFor=\"let data of homePageData\" class=\"post-preview\">\r\n        <a target=\"_blank\" href={{data.resource}}>\r\n          <h2 class=\"post-title\">\r\n            {{data.title}}\r\n          </h2>\r\n        </a>\r\n        <h3 class=\"post-subtitle\">\r\n          {{data.subtitle}}\r\n        </h3>\r\n        <p class=\"post-meta\">Posted by <a target=\"_blank\" href={{data.url}}> {{data.author}}</a> on {{data.date}}</p>\r\n      </div>\r\n      <hr>\r\n    </div>\r\n  </div>\r\n</div>\r\n<app-footer></app-footer>"
 
 /***/ }),
 
@@ -1295,14 +1295,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 
 var HomeComponent = (function () {
     function HomeComponent() {
     }
     HomeComponent.prototype.ngOnInit = function () {
+        this.homePageData = [
+            {
+                author: 'angular university',
+                date: '26 May 2016',
+                resource: "http://blog.angular-university.io/angular-2-universal-meet-the-internet-of-the-future-seo-friendly-single-page-web-apps/",
+                subtitle: "There has been a lot of talk about Angular in the last few months and how to use it to build client apps,\n         but one of its most important innovations is actually happening on the server.",
+                title: 'Angular Universal In Practice - How to build SEO Friendly Single Page Apps with Angular',
+                url: 'https://angular-university.io/'
+            },
+            {
+                author: 'toddmotto',
+                date: 'Mar 22, 2016',
+                resource: 'https://toddmotto.com/transclusion-in-angular-2-with-ng-content',
+                subtitle: "Projection is a very important concept in Angular. It enables developers to build reusable components\n          and make applications more scalable and flexible",
+                title: 'Angular Content Projection',
+                url: 'https://twitter.com/intent/follow?original_referer=https%3A%2F%2Ftoddmotto.com%2Ftransclusion-in-angular-2-with-ng-content&ref_src=twsrc%5Etfw&region=follow_link&screen_name=toddmotto&tw_p=followbutton'
+            },
+            {
+                author: 'john papa',
+                date: '17 SEPTEMBER 2016',
+                resource: 'https://johnpapa.net/introducing-angular-modules-feature-modules-2/',
+                subtitle: 'NgModules help organize an application into cohesive blocks of functionality.',
+                title: 'Angular Modules',
+                url: 'https://twitter.com/john_papa'
+            }
+        ];
     };
     return HomeComponent;
 }());
@@ -1311,8 +1334,7 @@ HomeComponent = __decorate([
         selector: 'app-home',
         template: __webpack_require__("../../../../../src/app/pages/home/home.component.html"),
         styles: [__webpack_require__("../../../../../src/app/pages/home/home.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], HomeComponent);
 
 //# sourceMappingURL=home.component.js.map
@@ -1325,14 +1347,16 @@ HomeComponent = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer_index__ = __webpack_require__("../../../../../src/app/footer/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_component__ = __webpack_require__("../../../../../src/app/pages/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__footer_index__ = __webpack_require__("../../../../../src/app/footer/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_component__ = __webpack_require__("../../../../../src/app/pages/home/home.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1344,10 +1368,10 @@ var HomeModule = (function () {
 HomeModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__home_component__["a" /* HomeComponent */]
+            __WEBPACK_IMPORTED_MODULE_3__home_component__["a" /* HomeComponent */]
         ],
-        imports: [__WEBPACK_IMPORTED_MODULE_1__footer_index__["a" /* FooterModule */]],
-        exports: [__WEBPACK_IMPORTED_MODULE_2__home_component__["a" /* HomeComponent */]]
+        imports: [__WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */], __WEBPACK_IMPORTED_MODULE_2__footer_index__["a" /* FooterModule */]],
+        exports: [__WEBPACK_IMPORTED_MODULE_3__home_component__["a" /* HomeComponent */]]
     })
 ], HomeModule);
 

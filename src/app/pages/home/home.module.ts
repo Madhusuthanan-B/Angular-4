@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FooterModule } from '../../footer/index';
 import { HomeComponent } from './home.component';
 
@@ -6,7 +7,7 @@ import { HomeComponent } from './home.component';
     declarations: [
         HomeComponent
     ],
-    imports: [FooterModule],
+    imports: [CommonModule, FooterModule],
     exports: [HomeComponent]
 
 })
